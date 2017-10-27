@@ -1,0 +1,57 @@
+/*CSS TP4*/
+
+
+body{
+	width: 1200px;
+	height: 100%;
+	margin: auto !important ;
+
+}
+
+#color{
+	background-color: white;
+	display: inline-block;	
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#banner{
+	width: 100%;
+}
+
+
+/*----------------------------------NAV-------------------------------------*/
+
+.active #menu{
+	color : white;
+	background-color: darkgray; 
+}
+
+#menu{
+	border : solid 1px pink;
+	color: black;
+	padding : 16px;
+
+}
+
+nav{
+	border-bottom: 1px solid black; 
+	/*border : solid 1px green;*/
+
+}
+
+
+/*----------------------------------FOOTER------------------------------------*/
+
+footer{
+	text-align: center;
+	vertical-align: center;
+	height: 120px;
+	border-top : 1px solid black;
+	margin-top: 20px;
+
+}
+
+
+
+
