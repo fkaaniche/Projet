@@ -1,9 +1,11 @@
-<nav id = testNav>
+<nav>
 	<p class="nav navbar-list">
 
-		<label class="<?php if($nom_module=='accueil') echo 'active'?>"><a id="menu" href="index.php?module=accueil">Accueil</a></label>
-		<label class="<?php if($nom_module=='livre' || $nom_module=='detailLivre') echo 'active'?>"><a id="menu" href="index.php?module=livre">Livres</a></label>
-		<label class="<?php if($nom_module=='genre' || $nom_module=='deteilGenre') echo 'active'?>"><a id="menu" href="index.php?module=genre">Genres</a></label>
-		<label class="<?php if($nom_module=='auteur' || $nom_module=='description') echo 'active'?>"><a id="menu" href="index.php?module=auteur">Auteur</a></label>
+		<label class="<?php if($nom_module=='accueil') echo 'active'?>"><a class="menu" href="index.php?module=accueil">Accueil</a></label>
+		<label class="<?php if($nom_module=='sejour' || $nom_module=='pageSejour') echo 'active'?>"><a class="menu" href="index.php?module=sejour">Séjour</a></label>
+		<label class="<?php if($nom_module=='circuit' || $nom_module=='pageCircuit') echo 'active'?>"><a class="menu" href="index.php?module=circuit">Circuit</a></label>
+		<label class="<?php if($nom_module=='croisiere' || $nom_module=='pageCroisiere') echo 'active'?>"><a class="menu" href="index.php?module=croisiere">Croisière</a></label>
+		<label class="<?php if($nom_module=='promo' || $nom_module=='pagePromo') echo 'active'?>"><a class="menu" href="index.php?module=promo">Promo</a></label>
+
 	</p>
 </nav>

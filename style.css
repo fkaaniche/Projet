@@ -4,15 +4,15 @@
 body{
 	width: 1200px;
 	height: 100%;
-	margin: auto !important ;
+	margin: auto;
 
 }
 
 #color{
 	background-color: white;
 	display: inline-block;	
-	margin-left: auto;
-	margin-right: auto;	
+/*	margin-left: auto;
+	margin-right: auto;	*/
 }
 
 #banner{
@@ -27,18 +27,38 @@ body{
 	background-color: darkgray; 
 }
 
-#menu{
+.menu{
 	border : solid 1px pink;
-	color: black;
-	padding : 16px;
+	color: #FFFAFA;
+	text-decoration: none;
+	padding-top: 4.5px;
+	padding-bot: 4.5px;
+	padding: 5px;
+
+
 
 }
 
 nav{
-	border-bottom: 1px solid black; 
-	/*border : solid 1px green;*/
+	margin: 0px;
 
 }
+
+.navbar-list {
+	background-image: url(images/banner.jpg);
+	margin: 0px;
+	padding: 10px;
+	border-bottom : solid 4px white;
+	border-radius: 10px;
+	position:fixed;
+	width: 1180px;
+
+	
+	
+	
+}
+
+
 
 
 /*----------------------------------FOOTER------------------------------------*/

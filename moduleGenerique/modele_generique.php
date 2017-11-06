@@ -1,9 +1,9 @@
 <?php
 
 	class ModeleGenerique{
-		private static $dns="mysql:host=localhost; dbname=projeta2s3;";
-		private static $user="root";
-		private static $password="";
+		private static $dns="mysql:host=database-etudiants.iut.univ-paris8.fr;dbname=dutinfopw201641";
+		private static $user="dutinfopw201641";
+		private static $password="teraqagu";
 		static protected $connexion;
 		
 		public static function init(){
