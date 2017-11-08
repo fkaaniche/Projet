@@ -31,11 +31,14 @@ body{
 	border : solid 1px pink;
 	color: #FFFAFA;
 	text-decoration: none;
-	padding-top: 4.5px;
-	padding-bot: 4.5px;
-	padding: 5px;
+	padding: 9px;
+}
 
-
+.menuBoutonCo {
+	border : solid 1px pink;
+	color: #FFFAFA;
+	text-decoration: none;
+	padding: 9px;
 
 }
 
