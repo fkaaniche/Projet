@@ -7,22 +7,22 @@
 		public function messageConnexion(){
 			$this->vue=new VueConnexion();
 			$this->modele=new ModeleConnexion();
-			if(isset($_SESSION['identifiantUtilisateur']) && isset($_SESSION['mdpUtilisateur'])) {
+			if(isset($_SESSION['mailClient']) && isset($_SESSION['mdpClient'])) {
 				$this->vue->vue_erreur("Vous êtes déjà connecté");
 			}
 			else {
-				if(isset($_GET['action']) && $_GET['action']=='connecter' && isset($_POST['identifiantUtilisateur']) && $_POST['identifiantUtilisateur']!="" && 
-isset($_POST['mdpUtilisateur']) && $_POST['mdpUtilisateur']!="") {
-					$mdp=htmlspecialchars($_POST['mdpUtilisateur']);
-					$identifiant=htmlspecialchars($_POST['identifiantUtilisateur']);
+				if(isset($_GET['action']) && $_GET['action']=='connecter' && isset($_POST['mailClient']) && $_POST['mailClient']!="" && 
+isset($_POST['mdpClient']) && $_POST['mdpClient']!="") {
+					$mdp=htmlspecialchars($_POST['mdpClient']);
+					$mail=htmlspecialchars($_POST['mailClient']);
 					try{
-						if(!$this->modele->connexion($identifiant, $mdp)){
-							$this->vue->vue_erreur("La combinaison entre l'identifiant et le mot de passe est incorrecte.");					
+						if(!$this->modele->connexion($mail, $mdp)){
+							$this->vue->vue_erreur("La combinaison entre votre adresse mail et le mot de passe est incorrecte.");					
 						}
 						else {
-							$_SESSION['identifiantUtilisateur']=$identifiant;
-							$_SESSION['mdpUtilisateur']=$mdp;
-							$admin=$this->modele->estAdmin($identifiant);
+							$_SESSION['mailClient']=$mail;
+							$_SESSION['mdpClient']=$mdp;
+							$admin=$this->modele->estAdmin($mail);
 							$_SESSION['admin']=$admin;
 							$this->vue->vue_confirm("Vous êtes connecté !");	
 						}		
@@ -31,16 +31,16 @@ isset($_POST['mdpUtilisateur']) && $_POST['mdpUtilisateur']!="") {
 						$this->vue->vue_erreur("La connexion n'a pas pu aboutir :/");
 					}					
 				}
-				else if(isset($_GET['action']) && $_GET['action']=='inscrire' && isset($_POST['nomUtilisateur']) && $_POST['nomUtilisateur']!="" && 
-isset($_POST['prenomUtilisateur']) && $_POST['prenomUtilisateur']!="" && isset($_POST['identifiantUtilisateur']) && $_POST['identifiantUtilisateur']!="" && 
-isset($_POST['mdpUtilisateur']) && $_POST['mdpUtilisateur']!="") {
-					$nom=htmlspecialchars($_POST['nomUtilisateur']);
-					$prenom=htmlspecialchars($_POST['prenomUtilisateur']);
-					$mdp=htmlspecialchars($_POST['mdpUtilisateur']);
-					$mdp2=htmlspecialchars($_POST['mdp2Utilisateur']);
-					$identifiant=htmlspecialchars($_POST['identifiantUtilisateur']);		
-					$mail=htmlspecialchars($_POST['mailUtilisateur']);
-					$mail2=htmlspecialchars($_POST['mail2Utilisateur']);
+				else if(isset($_GET['action']) && $_GET['action']=='inscrire' && isset($_POST['nomClient']) && $_POST['nomClient']!="" && 
+isset($_POST['prenomClient']) && $_POST['prenomClient']!="" && isset($_POST['mailClient']) && $_POST['mailClient']!="" && 
+isset($_POST['mdpClient']) && $_POST['mdpClient']!="") {
+					$nom=htmlspecialchars($_POST['nomClient']);
+					$prenom=htmlspecialchars($_POST['prenomClient']);
+					$adresse=htmlspecialchars($_POST['adresseClient']);		
+					$mdp=htmlspecialchars($_POST['mdpClient']);
+					$mdp2=htmlspecialchars($_POST['mdp2Client']);
+					$mail=htmlspecialchars($_POST['mailClient']);
+					$mail2=htmlspecialchars($_POST['mail2Client']);
 					
 					if($mdp!=$mdp2){
 						$this->vue->vue_erreur("Les deux mots de passe ne coincident pas.");
@@ -51,8 +51,8 @@ isset($_POST['mdpUtilisateur']) && $_POST['mdpUtilisateur']!="") {
 						return;
 					}
 					try{	
-						if(!$this->modele->creationCompte($nom, $prenom, $identifiant, $mdp, $mail)){
-							$this->vue->vue_erreur("L'identifiant est déjà utilisé par un autre utilisateur :/");					
+						if(!$this->modele->creationCompte($nom, $prenom, $adresse, $mail, $mdp)){
+							$this->vue->vue_erreur("L'adresse mail est déjà utilisé par un autre utilisateur :/");					
 						}
 						else {
 							$this->vue->vue_confirm("Vous êtes inscrit");	
