@@ -12,20 +12,9 @@
 	
 	
 	switch($nom_module){
+		
 		case "accueil" :
-		case "livre" :
-		case "genre" :
-		case "auteur" :
-		case "description" :
-		case "detailLivre" :
-		case "detailGenre" :
 		case "connexion" :
-		///////////////// a faire encore  !
-		case "ajoutAuteur" :
-		case "ajoutGenre" :
-		case "ajoutLivre" :
-		case "inscription" :
-		case "deconnexion" :
 			break;
 		default: 
 			$nom_module="mauvaisModule";			
