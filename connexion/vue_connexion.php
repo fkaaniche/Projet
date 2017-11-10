@@ -11,8 +11,8 @@
 				<!-------------------------------------TEXTFIELDS CONNEXION---------------------------------->
 					<form action="index.php?module=connexion&amp;action=connecter" method="POST"></br>
 						<div id = entreeFormCo>
-								<input id=formulaireCo type="text" autocomplete="off" name="identifiantUtilisateur" placeholder="Identifiant" required></br></br>
-								<input id=formulaireCo type="password" autocomplete="off" name="mdpUtilisateur" placeholder="Mot de passe" required></br></br></br>
+								<input id=formulaireCo type="text" autocomplete="off" name="mailClient" placeholder="Adresse Mail" required></br></br>
+								<input id=formulaireCo type="password" autocomplete="off" name="mdpClient" placeholder="Mot de passe" required></br></br></br>
 						</div>
 				<!-------------------------------------BOUTON CONNEXION---------------------------------->
 						<div id = buttonCo>
@@ -32,13 +32,13 @@
 				<form action="index.php?module=connexion&amp;action=inscrire" method="POST">
 					<div id = entreeFormIns>
 
-							<input type="text" autocomplete="off" name="prenomUtilisateur" placeholder="Prénom" maxlength="25" required ></br></br>
-							<input type="text" autocomplete="off" name="nomUtilisateur" placeholder="Nom" maxlength="25" required></br></br>
-							<input type="text" autocomplete="off" name="identifiantUtilisateur" placeholder="Identifiant" maxlength="25" required></br></br>
-							<input type="email" autocomplete="off" name="mailUtilisateur" placeholder="Adresse e-mail" maxlength="254" required></br></br>
-							<input type="email" autocomplete="off" name="mail2Utilisateur" placeholder="Confirmer e-mail" maxlength="254" required></br></br>
-							<input type="password" autocomplete="off" name="mdpUtilisateur" placeholder="Mot de passe" maxlength="254" required></br></br>
-							<input type="password" autocomplete="off" name="mdp2Utilisateur" placeholder="Confirmer mot de passe" maxlength="254" required></br></br></br>
+							<input type="text" autocomplete="off" name="prenomClient" placeholder="Prénom" maxlength="25" required ></br></br>
+							<input type="text" autocomplete="off" name="nomClient" placeholder="Nom" maxlength="25" required></br></br>
+							<input type="text" autocomplete="off" name="adresseClient" placeholder="Adresse" maxlength="25" required></br></br>
+							<input type="email" autocomplete="off" name="mailClient" placeholder="Adresse e-mail" maxlength="254" required></br></br>
+							<input type="email" autocomplete="off" name="mail2Client" placeholder="Confirmer e-mail" maxlength="254" required></br></br>
+							<input type="password" autocomplete="off" name="mdpClient" placeholder="Mot de passe" maxlength="254" required></br></br>
+							<input type="password" autocomplete="off" name="mdp2Client" placeholder="Confirmer mot de passe" maxlength="254" required></br></br></br>
 					</div>
 				<!-------------------------------------BOUTON INSCRIPTION---------------------------------->
 					<div id = buttonIns>
