@@ -14,7 +14,8 @@
 	switch($nom_module){
 		
 		case "accueil" :
-		case "connexion" :
+		case "inscription" :
+		case "deconnexion" :
 			break;
 		default: 
 			$nom_module="mauvaisModule";			
