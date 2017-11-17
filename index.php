@@ -14,7 +14,7 @@
 	switch($nom_module){
 		
 		case "accueil" :
-		case "inscription" :
+		case "connexion" :
 		case "deconnexion" :
 			break;
 		default: 

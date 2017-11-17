@@ -28,7 +28,7 @@ body{
 }
 
 .menu{
-	border : solid 1px pink;
+		border : solid 1px pink;
 	color: #FFFAFA;
 	text-decoration: none;
 	padding: 9px;
@@ -39,11 +39,10 @@ body{
 	color: #FFFAFA;
 	text-decoration: none;
 	padding: 9px;
-	margin-left: 650px;
+
 }
 
 nav{
-	margin: 0px;
 
 }
 
@@ -54,11 +53,6 @@ nav{
 	border-bottom : solid 4px white;
 	border-radius: 10px;
 	position:fixed;
-	width: 1180px;
-
-	
-	
-	
 }
 
 
