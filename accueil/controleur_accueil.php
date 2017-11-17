@@ -12,7 +12,7 @@
 					$tabCheminImages = $this->modele->get_chemin_images();
 
 
-					var_dump($tabCheminImages);
+					//var_dump($tabCheminImages);
 					$this->vue=new VueAccueil();
 					$this->vue->affiche($tabCheminImages);	
 
