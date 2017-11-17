@@ -5,6 +5,7 @@ body{
 	width: 1200px;
 	height: 100%;
 	margin: auto;
+	padding: 0;
 
 }
 
@@ -19,40 +20,62 @@ body{
 	width: 100%;
 }
 
+div{
+	position: relative;
+}
 
 /*----------------------------------NAV-------------------------------------*/
 
-.active #menu{
+/*.active .menu{
 	color : white;
-	background-color: darkgray; 
-}
+	background-color: #0099e6;
+}*/
+
 
 .menu{
-		border : solid 1px pink;
+	border : solid 1px pink;
 	color: #FFFAFA;
 	text-decoration: none;
-	padding: 9px;
+	padding: 13px;
+}
+
+.menu:hover {
+	color: white;
+	background-color: #0088cc
 }
 
 .menuBoutonCo {
 	border : solid 1px pink;
 	color: #FFFAFA;
 	text-decoration: none;
-	padding: 9px;
+	padding: 13px;
+}
+
+.menuBoutonCo:hover {
+	color: white;
+	background-color: #0088cc
 
 }
 
+.boutonCo{
+	display: inline-block;
+	float: right;
+}
+
 nav{
+	display: block;
+	position: fixed;
+	width: 100%;
+	max-width: 1200px;
 
 }
 
 .navbar-list {
 	background-image: url(images/banner.jpg);
+	padding: 13px;
 	margin: 0px;
-	padding: 10px;
 	border-bottom : solid 4px white;
 	border-radius: 10px;
-	position:fixed;
 }
 
 

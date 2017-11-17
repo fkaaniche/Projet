@@ -5,7 +5,6 @@
 		<label class="<?php if($nom_module=='circuit' || $nom_module=='pageCircuit') echo 'active'?>"><a class="menu" href="index.php?module=circuit">Circuit</a></label>
 		<label class="<?php if($nom_module=='croisiere' || $nom_module=='pageCroisiere') echo 'active'?>"><a class="menu" href="index.php?module=croisiere">Croisière</a></label>
 		<label class="<?php if($nom_module=='promo' || $nom_module=='pagePromo') echo 'active'?>"><a class="menu" href="index.php?module=promo">Promo</a></label>
-		<div class="boutonCo">
 
 <?php
 
@@ -29,19 +28,15 @@
 			if($_SESSION["agence"==1]) {
 ?>
 				<label class="<?php if($nom_module=='gererVoyage' || $nom_module=='pageGererVoyage') echo 'active' ?>"><a class="menuGestion" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
-</div>
-
 </nav>
 				return;
 <?php			}
 
 		}
 		else{
-		?>		
-
+		?>	 
 
 			<label class="<?php if($nom_module=='connexion' || $nom_module=='pageConnexion') echo 'active' ?>"><a class="menuBoutonCo" href="index.php?module=connexion">Connexion</a></label>
-			</div>
 		<?php
 		}
 		?>
