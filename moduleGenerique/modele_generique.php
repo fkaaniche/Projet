@@ -12,11 +12,6 @@
 			self::$connexion = new PDO(self::$dns, self::$user, self::$password);
 			self::$connexion->exec("SET NAMES 'UTF8'");
 		}
-		/*
-		function get_images($connexion){
-			$requete = $connexion->prepare("select illustrationSejour from Sejour")
-			$requete->execute();
-		}
-		*/	
+			
 	}		
 ?>
