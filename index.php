@@ -14,6 +14,7 @@
 	switch($nom_module){
 		
 		case "accueil" :
+		case "sejour" :
 		case "connexion" :
 		case "deconnexion" :
 			break;
