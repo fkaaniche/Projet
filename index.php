@@ -16,6 +16,7 @@
 		case "accueil" :
 		case "sejour" :
 		case "connexion" :
+		case "connexionAgence" :
 		case "deconnexion" :
 			break;
 		default: 

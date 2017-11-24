@@ -23,6 +23,10 @@
 			</div>
 
 
+			</br></br></br>
+			<label> Si vous êtes une agence et que vous voulez vous connecter, cliquez ici bas ! </label> 
+			</br>
+			<button onclick="window.location.href= \'index.php?module=connexionAgence\'"> Inscription / Connexion Agence </button>				
 
 <!-----------------------------------------------------------------------INSCRIPTION-------------------------------------------------------------------------------->
 			<div id = "inscription">

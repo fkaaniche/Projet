@@ -3,7 +3,7 @@
 		
 		public function connexionAgence($numero, $mdp){
 			try{
-				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.agence where numeroAgence=".$numero);
+				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.Agence where numeroAgence=".$numero);
 				$res=array($numero);	
 				$result->execute($res);
 			} catch(PDOException $e){
@@ -21,7 +21,7 @@
 		
 		public function creationCompteAgence($nom, $mdp, $adresse, $numero, $tel){
 			try{
-			$result=self::$connexion->prepare("insert into dutinfopw201641.agence(nomAgence, mdpAgence, adresseAgence, numeroAgence, telAgence) 
+			$result=self::$connexion->prepare("insert into dutinfopw201641.Agence(nomAgence, mdpAgence, adresseAgence, numeroAgence, telAgence) 
 values ( ?, ?, ?, ?, ?)");
 			$mdpEncrypt = hash('sha256', $mdp.$numero);
 			$res=array($nom, $mdpEncrypt, $adresse, $numero, $tel);
