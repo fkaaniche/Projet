@@ -8,6 +8,7 @@
 			$this->modele=new ModeleAccueil();
 			try{
 				if($this->modele->get_chemin_images()){
+
 					//	echo "CA MARCHE !";
 					$tabCheminImages = $this->modele->get_chemin_images();
 

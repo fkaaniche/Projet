@@ -16,7 +16,7 @@
 
 		public function vue_erreur($message){						
 			$this->contenu='<div id = errMessage > 
-						<h1><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Une erreur est survenue : <br/> </h1>
+						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Une erreur est survenue : <br/> 
 							<br/><br/><p> <font size = 5px color="red">' . $message . '</font> </p>
 							</br> 
 							<a href="index.php?module='. $GLOBALS ["nom_module"] .'"> 

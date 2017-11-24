@@ -3,7 +3,7 @@
 		
 		public function connexion($mail, $mdp){
 			try{
-				$result=self::$connexion->prepare("select mdpClient from dutinfopw201641.Client where mailClient=?");
+				$result=self::$connexion->prepare("select mdpClient from dutinfopw201641.client where mailClient=?");
 				$res=array($mail);	
 				// $result->bindParam('pseudoUtilisateur', $pseudo, PDO::PARAM_STR);
 				$result->execute($res);
@@ -22,7 +22,7 @@
 		
 		public function creationCompte($nom, $prenom, $adresse, $mail, $mdp){
 			try{
-			$result=self::$connexion->prepare("insert into dutinfopw201641.Client(nomClient, prenomClient, adresseClient, mailClient, mdpClient, estAdmin) 
+			$result=self::$connexion->prepare("insert into dutinfopw201641.client(nomClient, prenomClient, adresseClient, mailClient, mdpClient, estAdmin) 
 values ( ?, ?, ?, ?, ?, 0);");
 			$mdpEncrypt = hash('sha256', $mdp.$mail);
 			$res=array($nom, $prenom, $adresse, $mail, $mdpEncrypt);
@@ -47,7 +47,7 @@ values ( ?, ?, ?, ?, ?, 0);");
 		
 		public function estAdmin($mail){
 			try{			
-				$result=self::$connexion->prepare("select estAdmin from dutinfopw201641.Client where mailClient=:mailClient");
+				$result=self::$connexion->prepare("select estAdmin from dutinfopw201641.client where mailClient=:mailClient");
 				$result->bindValue('mailClient', $mail);
 				$result->execute();
 						
