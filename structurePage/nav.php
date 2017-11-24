@@ -9,9 +9,8 @@
 
 <?php
 
-		if(isset($_SESSION["identifiant"]) && $_SESSION["identifiant"]!="" && isset($_SESSION["mdp"]) && $_SESSION["mdp"]!="" && isset($_SESSION["admin"]) && $_SESSION["admin"]!=NULL){
+		if(isset($_SESSION["mailClient"]) && $_SESSION["mailClient"]!="" && isset($_SESSION["mdpClient"]) && $_SESSION["mdpClient"]!="" && isset($_SESSION["admin"]) && $_SESSION["admin"]!=NULL){
 ?>
-			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menu" href="index.php?action=deconnexion">Déconnexion</a></label>
 
 <?php
 			if($_SESSION["admin"]!=1){
@@ -22,20 +21,21 @@
 
 			 if($_SESSION["admin"]==1){ 
 ?>
-				<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menuGestion" href="index.php?module=compte&amp;admin=1">Gérer comptes</a></label>
+				<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte&amp;admin=1">Gérer comptes</a></label>
 
 <?php 
 			 }
-			if($_SESSION["agence"==1]) {
+			// if($_SESSION["agence"==1]) {
 ?>
-				<label class="<?php if($nom_module=='gererVoyage' || $nom_module=='pageGererVoyage') echo 'active' ?>"><a class="menuGestion" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
+			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menu" href="index.php?action=deconnexion">Déconnexion</a></label>
+				<!-- <label class= <?php //if($nom_module=='gererVoyage' || $nom_module=='pageGererVoyage') echo 'active' ?> "><a class="menuGestion" href="index.php?module=gererVoyage">Gérer Voyage</a></label> -->
 </div>
 
 </nav>
 				return;
 <?php			}
 
-		}
+		//}
 		else{
 		?>		
 

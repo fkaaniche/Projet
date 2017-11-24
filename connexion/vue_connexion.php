@@ -5,36 +5,35 @@
 			$this->contenu='
 
 <!----------------------------------------------------------------------CONNEXION--------------------------------------------------------------------------------->
-			<div id = "connexion">
-    				<u><h1 id = titreConnexion>Connexion :</h1> </u>
+			<div class= "connexionBody">
+    				<h2>Connexion :</h2> 
 
 				<!-------------------------------------TEXTFIELDS CONNEXION---------------------------------->
 					<form action="index.php?module=connexion&amp;action=connecter" method="POST"></br>
-						<div id = entreeFormCo>
-								<input id=formulaireCo type="text" autocomplete="off" name="mailClient" placeholder="Adresse Mail" required></br></br>
-								<input id=formulaireCo type="password" autocomplete="off" name="mdpClient" placeholder="Mot de passe" required></br></br></br>
+						<div>
+								<input type="text" autocomplete="off" name="mailClient" placeholder="Adresse Mail" required></br></br>
+								<input type="password" autocomplete="off" name="mdpClient" placeholder="Mot de passe" required></br></br></br>
 						</div>
 				<!-------------------------------------BOUTON CONNEXION---------------------------------->
-						<div id = buttonCo>
+						<div>
 							<input type="submit" value="Se connecter"/>	
 							<a href="https://www.google.fr/?gws_rd=ssl"> Mot de passe oublié ? </a>				
 						</div>			
 					</form>
+
 			</div>
-
-
-			</br></br></br>
+			</br>
 			<label> Si vous êtes une agence et que vous voulez vous connecter, cliquez ici bas ! </label> 
 			</br>
 			<button onclick="window.location.href= \'index.php?module=connexionAgence\'"> Inscription / Connexion Agence </button>				
 
-<!-----------------------------------------------------------------------INSCRIPTION-------------------------------------------------------------------------------->
-			<div id = "inscription">
-				</br> <u> <h1 id = titreInscription>Inscription :</h1> </u> </br>
+<!-----------------------------------------------------------------------INSCRIPTION--------------------------------------------------------------------------------><div class = "inscriptionBody">
+				<h2>Inscription :</h2> 
+
 
 				<!-------------------------------------TEXTFIELDS INSCRIPTION---------------------------------->
 				<form action="index.php?module=connexion&amp;action=inscrire" method="POST">
-					<div id = entreeFormIns>
+					<div>
 
 							<input type="text" autocomplete="off" name="prenomClient" placeholder="Prénom" maxlength="25" required ></br></br>
 							<input type="text" autocomplete="off" name="nomClient" placeholder="Nom" maxlength="25" required></br></br>
@@ -45,8 +44,8 @@
 							<input type="password" autocomplete="off" name="mdp2Client" placeholder="Confirmer mot de passe" maxlength="254" required></br></br></br>
 					</div>
 				<!-------------------------------------BOUTON INSCRIPTION---------------------------------->
-					<div id = buttonIns>
-						<p id = "conditionUtilisation">  
+					<div class = "boutonCoBody">
+						<p>  
 							En cliquant sur Inscription, 
 							vous acceptez nos <a href = "https://www.google.fr/intl/fr/policies/terms/regional.html">Conditions</a> et 
 							indiquez que vous avez lu 

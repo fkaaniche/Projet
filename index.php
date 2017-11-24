@@ -2,6 +2,7 @@
 
   require_once("moduleGenerique/module_generique.php"); // Require module et MVC
 	ModeleGenerique::init();
+	session_start();
 	
 	if(!isset($_GET['module'])){
 		$nom_module="accueil";
@@ -10,7 +11,11 @@
 		$nom_module=$_GET['module'];
 	}
 	
-	
+	if(isset($_GET['action']) && $_GET['action']=='deconnexion'){ 
+		session_destroy ();
+		header('Location: index.php?module=accueil');
+		exit();
+	} 
 	switch($nom_module){
 		
 		case "accueil" :
