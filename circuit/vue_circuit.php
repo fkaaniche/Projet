@@ -4,11 +4,11 @@
 
 	class VueCircuit extends VueGenerique{
 
-		public function afficheCircuits($sejours){
+		public function afficheCircuits($circuits){
 			$ret = "";
 			foreach ($circuits as $circuit) {
-				$ret.= '<img src="'.$sejour['illustrationSejour'].'" alt="séjour"/>';
-				$ret.= "<p>".$sejour['descriptionDetail']."</p>";
+				$ret.= '<img src="'.$circuit['illustrationSejour'].'" alt="séjour"/>';
+				$ret.= "<p>".$circuit['descriptionDetail']."</p>";
 			}
 			return $ret;
 		}

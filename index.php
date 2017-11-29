@@ -15,6 +15,7 @@
 		
 		case "accueil" :
 		case "sejour" :
+		case "circuit" :
 		case "connexion" :
 		case "deconnexion" :
 			break;

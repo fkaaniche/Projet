@@ -4,8 +4,7 @@
 
 		public function get_circuits(){
 			try{
-				//requete a changer
-				$requete = parent::$connexion->prepare("select illustrationSejour, descriptionDetail from dutinfopw201641.Sejour");
+				$requete = parent::$connexion->prepare("select * from dutinfopw201641.Sejour where idType=3");
 				$requete->execute();
 
 				if($requete==null){
@@ -14,7 +13,7 @@
 
 				$resultat=$requete->fetchAll();
 			}catch(PDOException $e){
-				throw new ModeleSejourException();
+				throw new ModeleCircuitException();
 			}
 
 			return $resultat;

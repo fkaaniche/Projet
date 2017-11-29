@@ -1,7 +1,7 @@
 <?php
 	require_once("circuit/controleur_circuit.php");
 		
-	class ModSejour extends ModuleGenerique{ 
+	class ModCircuit extends ModuleGenerique{ 
 			
 		public function __construct(){
 			$this->controleur=new ControleurCircuit();
