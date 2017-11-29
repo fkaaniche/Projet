@@ -20,6 +20,7 @@
 		
 		case "accueil" :
 		case "sejour" :
+		case "circuit" :
 		case "connexion" :
 		case "connexionAgence" :
 		case "deconnexion" :
