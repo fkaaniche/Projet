@@ -4,7 +4,7 @@
 
 		public function get_sejours(){
 			try{
-				$requete = parent::$connexion->prepare("select illustrationSejour, descriptionDetail from dutinfopw201641.Sejour");
+				$requete = parent::$connexion->prepare("select * from dutinfopw201641.Sejour");
 				$requete->execute();
 
 				if($requete==null){

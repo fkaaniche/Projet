@@ -16,19 +16,18 @@
 						</div>
 				<!-------------------------------------BOUTON CONNEXION---------------------------------->
 						<div>
-							<input type="submit" value="Se connecter"/>	
+							<input class="connexionBodyBoutonCo" type="submit" value="Se connecter"/>	
 							<a href="https://www.google.fr/?gws_rd=ssl"> Mot de passe oublié ? </a>				
 						</div>			
-					</form>
-
+					</form></br></br></br></br></br></br>
+					<div class= "inscriptionAgenceLink">
+						<label> Si vous êtes une agence et que vous voulez vous connecter, cliquez ici bas ! </label>
+						<button onclick="window.location.href= \'index.php?module=connexionAgence\'"> Inscription / Connexion Agence </button>
+					</div>			
 			</div>
-			</br>
-			<label> Si vous êtes une agence et que vous voulez vous connecter, cliquez ici bas ! </label> 
-			</br>
-			<button onclick="window.location.href= \'index.php?module=connexionAgence\'"> Inscription / Connexion Agence </button>				
 
 <!-----------------------------------------------------------------------INSCRIPTION--------------------------------------------------------------------------------><div class = "inscriptionBody">
-				<h2>Inscription :</h2> 
+				<h2>Inscription :</h2> </br>
 
 
 				<!-------------------------------------TEXTFIELDS INSCRIPTION---------------------------------->
@@ -51,15 +50,16 @@
 							indiquez que vous avez lu 
 							notre <a href = "https://www.google.fr/intl/fr/policies/privacy/"> Politique d’utilisation des données </a>, 
 							y compris notre <a href = "https://support.google.com/accounts/answer/61416?hl=fr"> Utilisation des cookies </a>.
-						</p></br> 
-						<input type="submit" value="Inscription"/> </br>
+						</p></br>
+						<input class="inscriptionBouton" type="submit" value="Inscription"/> </br>
 					</form>
 
 				</div>
 				
 			</div>
-		
 				
+				
+
 					';					
 				$this->titre="Connexion";
 		}

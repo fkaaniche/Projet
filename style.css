@@ -135,8 +135,8 @@ nav{
 	width: 30%;
 	margin-left: 5%;
 	margin-right: 10%;
-	border:solid 1px pink;
-	vertical-align: top;
+/*	border:solid 1px pink;
+*/	vertical-align: top;
 	margin-top: 20px;
 }
 
@@ -144,16 +144,23 @@ nav{
 	margin: 0px;
 }
 
+.connexionBodyBoutonCo {
+	width: 181px;
+} 
+
 .inscriptionBody {
 	display: inline-block;
-	width: 40%;
+	vertical-align: top;
+	padding-left: 10%;
+	width: 35%;
 	margin-left:5%;
 	margin-right: 5%;
 	border-left: solid 2px white;
-	vertical-align: top;
-	padding-left: 10%;
 	padding-right: 5%;
 	margin-top: 20px;
+/*	border: solid 2px green;
+*/
+
 }
 
 .inscriptionBody h2 {
@@ -161,10 +168,44 @@ nav{
 }
 
 .boutonCoBody {
-	border:solid 1px pink;
-	padding-left:0px;
+/*	border:solid 1px pink;
+*/	padding-left:0px;
 	padding-right:0px;
 }
+
+.inscriptionAgenceLink {
+	color: white;
+}
+
+.inscriptionAgenceLink button{
+	color: black	;
+}
+
+/*Firefox*/
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*Chrome*/
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+
+.inscriptionBouton{
+	width: 181px;
+}
+
+
+
 
 
 
