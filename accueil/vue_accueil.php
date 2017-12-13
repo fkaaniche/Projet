@@ -6,8 +6,9 @@
 		public function afficheCheminEtDescImages($images){
 			$ret = "";
 			foreach ($images as $image) {
-				$ret.= '<div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
-				$ret.= "<p>".$image['descriptionDetail']."</p> </div>";
+				$ret.= '<a href=index.php?module=detailsVoyage&idSejour='.$image["idSejour"].'><div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
+					var_dump($image);
+				$ret.= "<p>".$image['villeArriveeSejour']."</p> </div></a>";
 			}
 			return $ret;
 		}

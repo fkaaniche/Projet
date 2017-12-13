@@ -19,11 +19,9 @@
 	switch($nom_module){
 		
 		case "accueil" :
-		case "sejour" :
-		case "circuit" :
-		case "croisiere" :
 		case "connexion" :
 		case "connexionAgence" :
+		case "detailsVoyage" :
 		case "deconnexion" :
 			break;
 		default: 
