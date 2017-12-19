@@ -7,14 +7,13 @@
 			$this->modele = new ModeleDetailsVoyage();
 			$this->vue = new VueDetailsVoyage();
 			try{
-				if($this->modele->getDetails($_GET["idSejour"]) != null){ 
-					$tabDetails = $this->modele->getDetails($_GET["idSejour"]);
-					var_dump($tabDetails);
-					$this->vue->affiche($tabDetails);
+				$idSejour = $this->modele->getDetails($_GET["idSejour"] );
+				if( $idSejour == false){ 
+					$this->vue->vue_erreur("ça marche pas");
 				}
-
 				else {
-					echo "ça n'a pas vraiment atteint la cible.";
+					$this->vue->affiche($idSejour);
+				
 				}
 			}
 			catch(ModeleDetailsVoyageException $e){

@@ -8,21 +8,22 @@
 			//TODO faire fonctionner ce truc puis mettre un script
 			$this->contenu="<h1>".$details['villeArriveeSejour']."</h1>
 				
-				<form>
+				<!--<form>
 					<button id=\"btnDesc\" >Description</button>
 					<button id=\"btnActi\" >Activités</button>
 					<button id=\"btnForma\">Formalités</button>
 					<button id=\"btnTrans\">Transport</button>
-				</form>
+				</form> -->
 				<img src=\"".$details['illustrationSejour']."\" alt=\"Image Séjour\"/>
-				<p id=\"para\">".$details['descritptionDetail']."</p>
-				<p id=\"para\">".$details['descritptionActivite']."</p>
-				<p id=\"para\">".$details['descritptionFormalite']."</p>
-				<p id=\"para\">".$details['descritptionTransport']."</p>
+				<p id=\"para\">".$details['descriptionDetail']."</p>
+				<p id=\"para\">".$details['descriptionActivite']."</p>
+				<p id=\"para\">".$details['descriptionFormalite']."</p>
+				<p id=\"para\">".$details['descriptionTransport']."</p>
 				
 				
 				
 			";
+			
 
 
 		}

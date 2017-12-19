@@ -9,7 +9,7 @@
 					return false;
 				}
 
-				$resultat=$requete->fetchAll();
+				$resultat=$requete->fetch();
 
 			}catch(PDOException $e){
 				throw new ModeleDetailsVoyageException();
