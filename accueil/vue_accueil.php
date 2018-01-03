@@ -6,16 +6,15 @@
 		public function afficheCheminEtDescImages($images){
 			$ret = "";
 			foreach ($images as $image) {
-				$ret.= '<div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
-				$ret.= "<p>".$image['descriptionDetail']."</p> </div>";
+				$ret.= '<a href=index.php?module=detailsVoyage&idSejour='.$image["idSejour"].'><div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
+				$ret.= "<p>".$image['villeArriveeSejour']."</p> </div></a>";
 			}
 			return $ret;
 		}
 
 		public function affiche($images){
-			//var_dump($images);
 			$this->titre="Accueil";
-			$this->contenu ='<h1>Voyages</h1>
+			echo '<h1>Voyages</h1>
 			<p>Bienvenue sur notre site de voyage!
 			Plein de prix attrayant et des séjours
 			que vous n\'oublierez jamais!</p>
