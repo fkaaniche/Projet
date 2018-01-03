@@ -4,14 +4,13 @@
 
 	class VueDetailsVoyage extends VueGenerique{
 		public function affiche($details){
-			//TODO faire fonctionner le script
-			$this->contenu='<h1>'.$details["villeArriveeSejour"].'</h1>
+			echo '<h1>'.$details["villeArriveeSejour"].'</h1>
 				
 
 					<form>
 					<input type="button" value="Description" id="btnDesc" onclick="afficheDesc()"></input>
 					<input type="button" value="Activités" id="btnActi" onclick="afficheActi()"></input>
-					<input type="button" value="Formalités"id="btnForma" onclick="afficheForma()"></input>
+					<input type="button" value="Formalités" id="btnForma" onclick="afficheForma()"></input>
 					<input type="button" value="Transport" id="btnTrans" onclick="afficheTrans()"></input>
 					</form>
 				<img src="'.$details["illustrationSejour"].'" alt="Image Séjour"/>
