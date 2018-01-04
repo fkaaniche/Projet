@@ -7,7 +7,7 @@
 			$ret = "";
 			foreach ($images as $image) {
 				$ret.= '<div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
-				$ret.= "<p>".$image['descriptionDetail']."</p> </div>";
+				$ret.= "<p>".$image['villeArriveeSejour']."</p> </div>";
 			}
 			return $ret;
 		}
@@ -15,7 +15,7 @@
 		public function affiche($images){
 			//var_dump($images);
 			$this->titre="Accueil";
-			$this->contenu ='<h1>Voyages</h1>
+			$this->contenu ='
 			<p>Bienvenue sur notre site de voyage!
 			Plein de prix attrayant et des séjours
 			que vous n\'oublierez jamais!</p>
@@ -34,7 +34,8 @@
 				<img src="images/imagesVoyage/spa.jpg" alt="Catégorie thalasso"/>
 				<p>Séjours détente en thalasso-thérapie</p>
 			</div>
-			';
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>';
 		}
 	}
 
