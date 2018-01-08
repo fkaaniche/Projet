@@ -33,23 +33,12 @@ h1 {
 	color: red;
 }
 #titreSite {
-  position: absolute;
   font-family: New Century Schoolbook,TeX Gyre Schola, serif;
 	font-size: 50px;
 	text-align: center;
 	top:150px;
-	left: 858px; 
  }
 
- #titreSite2 {
-  position: fixed;
-  font-family: New Century Schoolbook,TeX Gyre Schola, serif;
-	font-size: 50px;
-	text-align: center;
-	top:-10px;
-	left: 858px; 
-	z-index: 4;
- }
 
 
 h2 {
@@ -71,6 +60,17 @@ h2 {
 	background-color: #0099e6;
 }*/
 
+ #titreSite2 {
+  	font-family: New Century Schoolbook,TeX Gyre Schola, serif;
+	font-size: 18px;
+		display: inline-block;
+	margin-right: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 13px;
+ }
+
 
 .menu{
 	display: inline-block;
@@ -78,7 +78,7 @@ h2 {
 	text-decoration: none;
 	margin-right: 20px;
 	padding: 13px;
-
+	font-size: 15px;
 }
 
 .menu:hover {
@@ -89,7 +89,7 @@ h2 {
 
 }
 
-.menuBoutonAccueil {
+/*.menuBoutonAccueil {
 	display: inline-block;
 	color: #FFFAFA;
 	text-decoration: none;
@@ -103,15 +103,16 @@ h2 {
 	color: white;
 	background-color: #0088cc;
 	text-decoration: none;
-}
+}*/
 
 .menuBoutonCo {
-	display: inline-block;
+	display:block;
 	color: #FFFAFA;
 	text-decoration: none;
 	margin-left: 20px;
 	font-size: 17px;
 	padding: 13px;
+
 
 }
 
@@ -125,6 +126,8 @@ h2 {
 
 .boutonCo{
 	float: right;
+	max-height: 51px;
+	display: inline-block;
 }
 
 nav{
@@ -132,6 +135,7 @@ nav{
 	width: 100%;
 	max-width: 1200px;
 	z-index: 4;
+	max-height: 95px;
 
 }
 
