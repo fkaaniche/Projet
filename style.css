@@ -23,7 +23,7 @@ body{
 }
 
 .divBody {
-	background: linear-gradient(#003366,#1a1a1a);
+	background: linear-gradient(#1a1a1a,#003366);
 
 }
 
@@ -31,10 +31,15 @@ body{
 
 h1 {
 	color: red;
-	font-family: New Century Schoolbook,TeX Gyre Schola, serif;
+}
+#titreSite {
+  font-family: New Century Schoolbook,TeX Gyre Schola, serif;
 	font-size: 50px;
 	text-align: center;
-}
+	top:150px;
+ }
+
+
 
 h2 {
 	color: red;
@@ -55,37 +60,74 @@ h2 {
 	background-color: #0099e6;
 }*/
 
+ #titreSite2 {
+  	font-family: New Century Schoolbook,TeX Gyre Schola, serif;
+	font-size: 18px;
+		display: inline-block;
+	margin-right: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 13px;
+ }
+
 
 .menu{
-	display: inline-block;;
+	display: inline-block;
 	color: #FFFAFA;
 	text-decoration: none;
+	margin-right: 20px;
 	padding: 13px;
+	font-size: 15px;
 }
 
 .menu:hover {
 	color: white;
 	background-color: #0088cc;
+	text-decoration: none;
+	font-size: 15px;
+
 }
 
-.menuBoutonCo {
+/*.menuBoutonAccueil {
 	display: inline-block;
-
-
-	border : solid 1px pink;
 	color: #FFFAFA;
 	text-decoration: none;
+	font-size: 18px;
+	margin-right: 20px;
 	padding: 13px;
+
+}
+
+.menuBoutonAccueil:hover {
+	color: white;
+	background-color: #0088cc;
+	text-decoration: none;
+}*/
+
+.menuBoutonCo {
+	display:block;
+	color: #FFFAFA;
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 17px;
+	padding: 13px;
+
 
 }
 
 .menuBoutonCo:hover {
 	color: white;
 	background-color: #0088cc;
+	text-decoration: none;
+
+
 }
 
 .boutonCo{
 	float: right;
+	max-height: 51px;
+	display: inline-block;
 }
 
 nav{
@@ -93,6 +135,7 @@ nav{
 	width: 100%;
 	max-width: 1200px;
 	z-index: 4;
+	max-height: 95px;
 
 }
 
@@ -101,8 +144,9 @@ nav{
 	padding: 13px;
 	margin: 0px;
 	border-bottom : solid 4px white;
-	border-radius: 10px;
-}
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px; 
+	 }
 
 /*----------------------------------Accueil---------------------------------*/
 
@@ -204,9 +248,65 @@ input::-o-outer-spin-button {
 	width: 181px;
 }
 
+/* ---------------------------------Page de sejour-------------------------*/
+/*.pageSejourBlocVoyage p {
+	margin:0px;
+}
+
+.pageSejourBlocVoyage h3 {
+ 	text-align: center;
+ 	font-size: 50px;
+ 	margin-left: 155px;
+}
+
+.pageSejourBlocVoyage:hover {
+background-color: rgba(253, 253, 253, 0.5);
+transition: all 1s;
+-webkit-transition:all 1s;
+}
 
 
+.pageSejourBlocVoyage {
+	display: inline-block;
+	color: white;
+	margin-left: 125px;
+	margin-bottom: 50px;
+	border:solid 2px white;
+}
 
+.imgResumePageSejour {
+	width: 400px;
+	height: 266px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sejourResumeVoyage {
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sejourResumeVoyage p {
+	margin-left: 25px;
+}
+
+.sejourResumePrix {
+	width:150px; 
+	margin-left: 100px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #e67300;
+	margin-top: 10%;
+}
+
+.pageSejourVoirOffre {
+	display: inline-block;
+	vertical-align: bottom;
+	padding: 10px;
+	background-color: green;
+}*/
+*/
 
 
 

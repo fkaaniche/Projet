@@ -1,11 +1,7 @@
 <nav class="nav navbar-list">
-
-		<label class="<?php if($nom_module=='accueil') echo 'active'?>"><a class="menu" href="index.php?module=accueil">Accueil</a></label>
-		<label class="<?php if($nom_module=='sejour' || $nom_module=='pageSejour') echo 'active'?>"><a class="menu" href="index.php?module=sejour">Séjour</a></label>
-		<label class="<?php if($nom_module=='circuit' || $nom_module=='pageCircuit') echo 'active'?>"><a class="menu" href="index.php?module=circuit">Circuit</a></label>
-		<label class="<?php if($nom_module=='croisiere' || $nom_module=='pageCroisiere') echo 'active'?>"><a class="menu" href="index.php?module=croisiere">Croisière</a></label>
-		<label class="<?php if($nom_module=='promo' || $nom_module=='pagePromo') echo 'active'?>"><a class="menu" href="index.php?module=promo">Promo</a></label>
-		<div class="boutonCo">
+	 	<a href="index.php" ><h1 id="titreSite2">Voyages</h1></a>	
+<div class="boutonCo">
+ 
 
 <?php
 
@@ -15,6 +11,8 @@
 ?>
 				<label class="<?php if($nom_module=="panier") echo "active"?>"><a class="menu" href="index.php?module=panier">Panier</a></label>
 				<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer mon compte</a></label>
+				<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menuBoutonCo" href="index.php?action=deconnexion">Déconnexion</a></label>
+
 
 <?php			}
 			
@@ -22,7 +20,7 @@
 			if($_SESSION["admin"]==1) {
 ?>			<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer comptes</a></label>
 			<label class="<?php if($nom_module=='gererVoyage') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
-			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menu" href="index.php?action=deconnexion">Déconnexion</a></label>
+			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menuBoutonCo" href="index.php?action=deconnexion">Déconnexion</a></label>
 
 
 		</div>
@@ -33,7 +31,7 @@
 ?>
 			<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer le compte</a></label>
 			<label class="<?php if($nom_module=='gererVoyage') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
-			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menu" href="index.php?action=deconnexion">Déconnexion</a></label>
+			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menuBoutonCo" href="index.php?action=deconnexion">Déconnexion</a></label>
 		</div>
 <?php
 		}

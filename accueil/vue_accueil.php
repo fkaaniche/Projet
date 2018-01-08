@@ -6,15 +6,18 @@
 		public function afficheCheminEtDescImages($images){
 			$ret = "";
 			foreach ($images as $image) {
+
 				$ret.= '<a href=index.php?module=detailsVoyage&idSejour='.$image["idSejour"].'><div class="blocVoyageAccueil"> <img src="'.$image['illustrationSejour'].'" alt="nouveauté"/> ';
 				$ret.= "<p>".$image['villeArriveeSejour']."</p> </div></a>";
+
 			}
 			return $ret;
 		}
 
 		public function affiche($images){
 			$this->titre="Accueil";
-			echo '<h1>Voyages</h1>
+
+			$this->contenu ='
 			<p>Bienvenue sur notre site de voyage!
 			Plein de prix attrayant et des séjours
 			que vous n\'oublierez jamais!</p>
@@ -32,8 +35,7 @@
 			</div><div class="blocVoyageAccueil">
 				<img src="images/imagesVoyage/spa.jpg" alt="Catégorie thalasso"/>
 				<p>Séjours détente en thalasso-thérapie</p>
-			</div>
-			';
+			</div>';
 		}
 	}
 
