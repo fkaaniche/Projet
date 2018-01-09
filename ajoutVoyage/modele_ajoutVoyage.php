@@ -1,0 +1,23 @@
+<?php			
+	
+	class ModeleAjoutVoyage extends ModeleGenerique{	
+	    //TODO un peu tout 
+	    public function get_chemin_images(){
+	    	try{
+	    		$requete = parent::$connexion->prepare("select illustrationSejour, villeArriveeSejour, idSejour from dutinfopw201641.Sejour ORDER BY idSejour DESC LIMIT 3");
+				$requete->execute();
+
+				if ($requete == null){
+					return false;
+				}
+	    	
+				$resultat=$requete->fetchAll();
+			}catch(PDOException $e){
+				throw new ModeleAccueilException();
+				
+			}
+			
+			return $resultat;
+		}
+	}
+?>
