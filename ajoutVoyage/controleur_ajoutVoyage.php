@@ -33,6 +33,13 @@
 		
 		}
 		*/
-		
+		public function ajoutVoyage(){
+			$this->modele = new ModeleAjoutVoyage();
+			try{
+				//TODO récup les trucs du formulaire de la vue et le reste
+			}catch(ModeleAjoutVoyageException $e){
+				$this->vue->vue_erreur("Problème sur ajoutVoyage");	
+			}
+		}
 	}
 ?>

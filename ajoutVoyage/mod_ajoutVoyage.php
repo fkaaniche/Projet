@@ -6,7 +6,7 @@
 			
 		public function __construct(){
 			$this->controleur=new ControleurAjoutVoyage();
-			$this->controleur->messageAccueil();	//TODO changer cette fonction
+			$this->controleur->ajoutVoyage();
 		}
 	}
 ?>

@@ -7,7 +7,7 @@
 		public function affiche(){
 			$this->titre="Ajouter un voyage";
 			echo '
-				<form>
+				<form action="index.php?module=ajoutVoyage&amp;action=ajouterVoyage" method="POST">
 					<label>Type de voyage</label>
 					<select>
 					<option>Montagne</option>
