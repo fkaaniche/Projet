@@ -346,12 +346,15 @@ transition: all 1s;
 	margin-top: 10%;
 }
 
+<<<<<<< HEAD
 .pageSejourVoirOffre {
 	display: inline-block;
 	vertical-align: bottom;
 	padding: 10px;
 	background-color: green;
-}
+}*/
+*/
+=======
 #paraDescVoyage {
 	border:2px solid white;
 	width: 900px;
@@ -395,7 +398,7 @@ transition: all 1s;
 	width: 600px;
 	height: 400px;
 }
-
+>>>>>>> 78edcbde1dd67c99eb22f8661d102073a467611c
 
 
 
