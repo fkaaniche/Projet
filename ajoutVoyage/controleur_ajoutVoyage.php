@@ -6,6 +6,7 @@
 	class ControleurAjoutVoyage extends ControleurGenerique{
 
 		//TODO renommer et refaire cette fonction (NE PAS OUBLIER DE CHANGER DANS mod_ajoutVoyage)
+		/*
 		public function messageAccueil(){
 			$this->modele=new ModeleAccueil();
 			try{
@@ -31,5 +32,7 @@
 			}
 		
 		}
+		*/
+		
 	}
 ?>

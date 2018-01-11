@@ -4,15 +4,17 @@
 	class VueAjoutVoyage extends VueGenerique{
 
 		//TODO important a faire
-		public function affiche($images){
+		public function affiche(){
 			$this->titre="Ajouter un voyage";
-			//TODO rajouter d'autres types de voyage
 			echo '
 				<form>
 					<label>Type de voyage</label>
 					<select>
-					<option>Croisière</option>
+					<option>Montagne</option>
 					<option>Club Vacances</option>
+					<option>Circuit</option>
+					<option>Thalasso</option>
+					<option>Croisière</option>
 					</select>
 					
 					<label>Ville de départ:</label><input type="text">
@@ -32,6 +34,7 @@
 					<label>Moyens de transport</label><input type="text">
 					
 					<label>Autres informations</label><input type="text">
+					<label>Ajouter</label><input type="button">
 				</form>
 			';
 		}
