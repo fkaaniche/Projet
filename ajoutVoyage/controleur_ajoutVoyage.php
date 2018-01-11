@@ -5,38 +5,27 @@
 	
 	class ControleurAjoutVoyage extends ControleurGenerique{
 
-		//TODO renommer et refaire cette fonction (NE PAS OUBLIER DE CHANGER DANS mod_ajoutVoyage)
-		/*
-		public function messageAccueil(){
-			$this->modele=new ModeleAccueil();
-			try{
-				if($this->modele->get_chemin_images()){
-
-					//	echo "CA MARCHE !";
-					$tabCheminImages = $this->modele->get_chemin_images();
-
-
-					//var_dump($tabCheminImages);
-					$this->vue=new VueAccueil();
-					$this->vue->affiche($tabCheminImages);	
-
-				}	
-			else{
-					ECHO"CA MARCHE PAS";
-			}
-				//var_dump($this->modele->get_chemin_images());
-				//var_dump($tabCheminImages);
-			}
-			catch(ModeleAccueilException $e){
-				$this->vue->vue_erreur("ça marche pas");
-			}
-		
-		}
-		*/
+		//TODO cette fonction
 		public function ajoutVoyage(){
 			$this->modele = new ModeleAjoutVoyage();
+			$this->vue = new VueAjoutVoyage();
 			try{
 				//TODO récup les trucs du formulaire de la vue et le reste
+                if(isset($_GET['action']) && $_GET['action']=='ajouterVoyage'){
+                    $typeVoyage = htmlspecialchars($_POST['typeVoyage']);//pas sur que ça fonctionne comme ça
+                    $dateDepart = htmlspecialchars($_POST['dateDepart']);
+                    $dateArrivee = htmlspecialchars($_POST['dateArrivee']);
+                    $villeDepart = htmlspecialchars($_POST['villeDepart']);
+                    $villeArrivee = htmlspecialchars($_POST['villeArrivee']);
+                    $hotel = htmlspecialchars($_POST['hotelSejour']);
+                    $nbPlaces = htmlspecialchars($_POST['nbPlacesSejour']);
+                    $details = htmlspecialchars($_POST['descriptionDetail']);
+                    $formalites = htmlspecialchars($_POST['descriptionFormalites']);
+                    $transport = htmlspecialchars($_POST['descriptionTransport']);
+                    $activites = htmlspecialchars($_POST['descriptionActivites']);
+
+
+                }
 			}catch(ModeleAjoutVoyageException $e){
 				$this->vue->vue_erreur("Problème sur ajoutVoyage");	
 			}

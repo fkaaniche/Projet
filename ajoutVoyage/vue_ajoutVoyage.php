@@ -34,7 +34,7 @@
 					<label>Moyens de transport</label><input type="text">
 					
 					<label>Autres informations</label><input type="text">
-					<label>Ajouter</label><input type="button">
+					<label>Ajouter</label><input type="submit">
 				</form>
 			';
 		}
