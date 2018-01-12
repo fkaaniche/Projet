@@ -396,7 +396,20 @@ transition: all 1s;
 	height: 400px;
 }
 
+/*----------------------------------GestionCompte-----------------------------*/
+#titreGestionDesComptes {
+	text-align: center;
+}
 
+.gestionCompteAdminBody {
+	color: white;
+	text-align: center;
+	margin-left: 20px;
+}
+
+.gestionCompteUserBody {
+	color:wite;
+}
 
 
 /*----------------------------------FOOTER------------------------------------*/
