@@ -5,9 +5,22 @@
 	class VueDetailsVoyage extends VueGenerique{
 		public function affiche($details){
 			echo '<div class="blocDescDetailVoyage">
-<h1>'.$details["villeArriveeSejour"].'</h1>
+				<h1>'.$details["villeArriveeSejour"].'</h1>
 				<div class="imgEtbtnDescVoyage">
-					<input type="button" value="Réserver" class="boutonCommanderDesc" ></input>
+				
+					<div class="descVoyTarif"><input type="button" value="Réserver" class="boutonCommanderDesc" >.';
+					if($details["prixEnfant"]==-1) {
+						echo '.<div class="descVoyTarifAdulte"><p>
+						Sejour adulte uniquement</br>
+						Tarif:'.$details["prixAdulte"].' par Adulte</p></div>';
+					}
+					else {
+						echo '.
+							<div class="descVoyTarifEnfantAdulte"> <p>
+							Tarif:</br>'.$details["prixEnfant"].'€ par Enfant</br>'
+								.$details["prixAdulte"].'€ par Adulte</p></div></div>.';
+					}
+					echo'. 
 					<img src="'.$details["illustrationSejour"].'" alt="Image Séjour"/>
 					<form>
 					<input type="button" value="Description" id="btnDesc" class="btnFormDesc" onclick="afficheDesc()"></input>
@@ -36,9 +49,7 @@
 				</script>
 			</div>
 			';
-			
-
-
+					$this->titre='Voyage à '.$details["villeArriveeSejour"];
 		}
 	}
 

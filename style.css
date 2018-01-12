@@ -30,9 +30,7 @@ body{
 
 
 h1 {
-
-	color: red;
-
+	color: #ff3833;
 }
 #titreSite {
   font-family: New Century Schoolbook,TeX Gyre Schola, serif;
@@ -109,7 +107,7 @@ h2 {
 
 .menuBoutonCo {
 	display:block;
-	color: #FFFAFA;
+	color: #ffffff;
 	text-decoration: none;
 	margin-left: 20px;
 	font-size: 17px;
@@ -147,8 +145,7 @@ nav{
 	margin: 0px;
 	border-bottom : solid 4px white;
 	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px; 
-
+	border-bottom-left-radius: 10px;
 	 }
 
 /*----------------------------------Accueil---------------------------------*/
@@ -258,33 +255,6 @@ transition: all 1s;
 -webkit-transition:all 1s;
 }
 
-<<<<<<< HEAD
-
-.pageSejourBlocVoyage {
-	display: inline-block;
-	color: white;
-	margin-left: 125px;
-	margin-bottom: 50px;
-	border:solid 2px white;
-}
-
-.imgResumePageSejour {
-	width: 400px;
-	height: 266px;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.sejourResumeVoyage {
-	width: 250px;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.sejourResumeVoyage p {
-	margin-left: 25px;
-}
-=======
 
 .pageSejourBlocVoyage {
 	display: inline-block;
@@ -337,21 +307,7 @@ transition: all 1s;
 	text-align: center;
 }
 
-.sejourResumePrix {
-	width:150px; 
-	margin-left: 100px;
-	display: inline-block;
-	vertical-align: top;
-	background-color: #e67300;
-	margin-top: 10%;
-}
 
-.pageSejourVoirOffre {
-	display: inline-block;
-	vertical-align: bottom;
-	padding: 10px;
-	background-color: green;
-}
 #paraDescVoyage {
 	border:2px solid white;
 	width: 900px;
@@ -371,6 +327,22 @@ transition: all 1s;
 	width: 150px;
 	height: 80px;
 	color: white;
+}
+
+.boutonCommanderDesc:hover {
+	background: #a7541c;
+}
+
+.descVoyTarif {
+	width: 150px;
+	float: right;
+	display: inline-block;
+}
+
+.descVoyTarif p {
+	border: white 2px solid;
+	border-radius: 10px;
+	margin-top: 50px;
 }
 
 .btnFormDesc {
@@ -410,7 +382,6 @@ transition: all 1s;
 .gestionCompteUserBody {
 	color:wite;
 }
-
 
 /*----------------------------------FOOTER------------------------------------*/
 

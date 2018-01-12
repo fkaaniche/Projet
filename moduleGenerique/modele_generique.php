@@ -2,10 +2,10 @@
 
 	class ModeleGenerique{
 
-		private static $dns="mysql:host=database-etudiants.iut.univ-paris8.fr;dbname=dutinfopw201641";
+		private static $dns="mysql:host=localhost;dbname=dutinfopw201641";
 
-		private static $user="dutinfopw201641";
-		private static $password="teraqagu";
+		private static $user="root";
+		private static $password="";
 		static protected $connexion;
 		
 		public static function init(){
