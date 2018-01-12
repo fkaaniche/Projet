@@ -31,6 +31,9 @@
 		}
 		else if(isset($_SESSION['numeroAgence']) && isset($_SESSION['mdpAgence'])) {
 ?>
+			<label class="<?php if($nom_module=='ajoutVoyage') echo 'active'?>">
+				<a class="menu" href="index.php?module=ajoutVoyage&amp;idAgence=<?php $_SESSION['numeroAgence'] ?>">Ajouter un Voyage</a>
+			</label>
 			<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer le compte</a></label>
 			<label class="<?php if($nom_module=='gererVoyage') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
 			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menu" href="index.php?action=deconnexion">Déconnexion</a></label>

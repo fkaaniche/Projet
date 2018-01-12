@@ -22,6 +22,7 @@
 		case "connexion" :
 		case "connexionAgence" :
 		case "detailsVoyage" :
+		case "ajoutVoyage" :
 		case "deconnexion" :
 			break;
 		default: 
