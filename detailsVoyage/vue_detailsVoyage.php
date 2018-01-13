@@ -10,24 +10,24 @@
 				
 					<div class="descVoyTarif"><input type="button" value="Réserver" class="boutonCommanderDesc" >.';
 					if($details["prixEnfant"]==-1) {
-						echo '.<div class="descVoyTarifAdulte"><p>
+						echo '.<p>
 						Sejour adulte uniquement</br>
-						Tarif:'.$details["prixAdulte"].' par Adulte</p></div>';
+						Tarif:'.$details["prixAdulte"].' € par Adulte</p>';
 					}
 					else {
 						echo '.
-							<div class="descVoyTarifEnfantAdulte"> <p>
+							 <p>
 							Tarif:</br>'.$details["prixEnfant"].'€ par Enfant</br>'
-								.$details["prixAdulte"].'€ par Adulte</p></div></div>.';
+								.$details["prixAdulte"].'€ par Adulte</p>.';
 					}
-					echo'. 
+					echo'. </div>
 					<img src="'.$details["illustrationSejour"].'" alt="Image Séjour"/>
 					<form>
 					<input type="button" value="Description" id="btnDesc" class="btnFormDesc" onclick="afficheDesc()"></input>
 					<input type="button" value="Activités" id="btnActi" class="btnFormDesc" onclick="afficheActi()"></input>
 					<input type="button" value="Formalités" id="btnForma" class="btnFormDesc" onclick="afficheForma()"></input>
 					<input type="button" value="Transport" id="btnTrans" class="btnFormDesc" onclick="afficheTrans()"></input>
-					</form></div>
+					</form>
 
 				<p id="paraDescVoyage">'.$details["descriptionDetail"].'</p>
 				

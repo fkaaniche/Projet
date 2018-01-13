@@ -3,7 +3,7 @@
 	class ModeleGenerique{
 
 		private static $dns="mysql:host=localhost;dbname=dutinfopw201641";
-
+        //database-etudiants.iut.univ-paris8.fr
 		private static $user="root";
 		private static $password="";
 		static protected $connexion;
