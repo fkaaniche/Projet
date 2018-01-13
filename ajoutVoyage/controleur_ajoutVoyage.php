@@ -5,15 +5,29 @@
 	
 	class ControleurAjoutVoyage extends ControleurGenerique{
 
-		//TODO cette fonction
 		public function ajoutVoyage(){
 			$this->modele = new ModeleAjoutVoyage();
 			$this->vue = new VueAjoutVoyage();
 			try{
 				$this->vue->affiche();
-				//TODO faire passer le chemin de l'image
                 if(isset($_GET['action']) && $_GET['action']=='ajouterVoyage'){
-                    if(isset($_POST['typeVoyage']) && isset($_POST['dateDepart']) && isset($_POST['dateArrivee']) && isset($_POST['villeDepart']) && isset($_POST['villeArrivee']) && isset($_POST['tarifEnfant']) && isset($_POST['tarifAdulte']) && isset($_POST['hotelSejour']) && isset($_POST['nbPlacesSejour']) && isset($_POST['descriptionDetail']) && isset($_POST['descriptionFormalites']) && isset($_POST['descriptionTransport']) && isset($_POST['descriptionActivites']) && isset($_FILES)){ 
+                 /*   var_dump(htmlspecialchars($_POST['typeVoyage']));
+                    var_dump(htmlspecialchars($_POST['dateDepart']));
+                    var_dump(htmlspecialchars($_POST['dateArrivee']));
+                    var_dump(htmlspecialchars($_POST['villeDepart']));
+                    var_dump(htmlspecialchars($_POST['villeArrivee']));
+                    var_dump(htmlspecialchars($_POST['tarifEnfant']));
+                    var_dump(htmlspecialchars($_POST['tarifAdulte']));
+                    var_dump(htmlspecialchars($_POST['hotelSejour']));
+                    var_dump(htmlspecialchars($_POST['nbPlacesSejour']));
+                    var_dump(htmlspecialchars($_POST['descriptionDetail']));
+                    var_dump(htmlspecialchars($_POST['descriptionFormalites']));
+                    var_dump(htmlspecialchars($_POST['descriptionTransport']));
+                    var_dump(htmlspecialchars($_POST['descriptionActivites']));
+                    var_dump(htmlspecialchars($_GET['idAgence']));
+                    var_dump($_FILES['illustrationSejour']['name']);*/
+
+                    if(isset($_POST['typeVoyage']) && isset($_POST['dateDepart']) && isset($_POST['dateArrivee']) && isset($_POST['villeDepart']) && isset($_POST['villeArrivee']) && isset($_POST['tarifEnfant']) && isset($_POST['tarifAdulte']) && isset($_POST['hotelSejour']) && isset($_POST['nbPlacesSejour']) && isset($_POST['descriptionDetail']) && isset($_POST['descriptionFormalites']) && isset($_POST['descriptionTransport']) && isset($_POST['descriptionActivites']) && isset($_FILES['illustrationSejour']['name'])){
                     	$typeVoyage = htmlspecialchars($_POST['typeVoyage']); //OK
                     	$dateDepart = htmlspecialchars($_POST['dateDepart']); //OK
                     	$dateArrivee = htmlspecialchars($_POST['dateArrivee']); //OK
@@ -30,8 +44,8 @@
                     	$idAgence = htmlspecialchars($_GET['idAgence']);
                     	$illustrationSejour = "images/imagesVoyage/".$_FILES['illustrationSejour']['name'];
                     	
-
-                    	$tabDonnees = array($typeVoyage,$dateDepart,$dateArrivee,$villeDepart,$villeArrivee,                   		$tarifAdulte,$tarifEnfant,$hotel,$nbPlaces,$details,$formalites,$transport,$activites,$idAgence);
+                    	$tabDonnees = array('idType' => $typeVoyage, 'dateDebutSejour' => $dateDepart, 'dateFinSejour' => $dateArrivee, 'villeDepartSejour' => $villeDepart, 'villeArriveeSejour' =>$villeArrivee, 'tarifAdulte' => $tarifAdulte, 'tarifEnfant' => $tarifEnfant,'hotelSejour' => $hotel, 'nbPlaceSejour' => $nbPlaces,'descriptionDetail' => $details, 'descriptionFormalite' =>  $formalites, 'descriptionTransport' => $transport, 'descriptionActivite' => $activites, 'idAgence' => $idAgence, 'illustrationSejour' => $illustrationSejour);
+                    	var_dump($tabDonnees);
                     	$this->modele->ajouterVoyage($tabDonnees);
                     }
                     else{

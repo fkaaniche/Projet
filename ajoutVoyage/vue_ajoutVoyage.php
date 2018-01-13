@@ -3,11 +3,11 @@
 
 	class VueAjoutVoyage extends VueGenerique{
 
-		//TODO important a faire
+
 		public function affiche(){
 			$this->titre="Ajouter un voyage";
 			echo '
-				<form action="index.php?module=ajoutVoyage&amp;action=ajouterVoyage" method="POST">
+				<form action="index.php?module=ajoutVoyage&amp;action=ajouterVoyage&amp;idAgence='.$_SESSION['numeroAgence'].'" method="POST" enctype="multipart/form-data">
 					<label>Type de voyage</label>
 					<select name="typeVoyage">
 					<option value="1">Montagne</option>
