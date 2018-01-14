@@ -1,6 +1,7 @@
 <?php
 
   require_once("moduleGenerique/module_generique.php"); // Require module et MVC
+
 	ModeleGenerique::init();
 	session_start();
 	
@@ -36,4 +37,4 @@
 	$module->controleur->getVue()->tamponVersContenu();
 	require_once("structurePage/template.php");
 
-?>
+	?>

@@ -11,33 +11,38 @@ body{
 
 #color{
 	background-color: white;
-	display: inline-block;	
+	display: inline-block;
 /*	margin-left: auto;
-	margin-right: auto;	*/
+margin-right: auto;	*/
 }
 
 #banner{
 	width: 100%;
 	height: 450px;
-	
+
 }
 
 .divBody {
-	background: linear-gradient(#003366,#1a1a1a);
+	background: linear-gradient(#1a1a1a,#003366);
 
 }
 
 
 
 h1 {
-	color: red;
+	color: #ff3833;
+}
+#titreSite {
 	font-family: New Century Schoolbook,TeX Gyre Schola, serif;
 	font-size: 50px;
 	text-align: center;
+	top:150px;
 }
 
+
+
 h2 {
-	color: red;
+	color: #ff0000;
 	font-size: 45px;
 	text-align: left;
 	margin-left: 19px;
@@ -53,91 +58,127 @@ h2 {
 /*.active .menu{
 	color : white;
 	background-color: #0099e6;
-}*/
+	}*/
+
+	#titreSite2 {
+		font-family: New Century Schoolbook,TeX Gyre Schola, serif;
+		font-size: 18px;
+		display: inline-block;
+		margin-right: 20px;
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-bottom: 0px;
+		padding: 13px;
+	}
 
 
-.menu{
-	display: inline-block;;
+	.menu{
+		display: inline-block;
+		color: #FFFAFA;
+		text-decoration: none;
+		margin-right: 20px;
+		padding: 13px;
+		font-size: 15px;
+	}
+
+	.menu:hover {
+		color: white;
+		background-color: #0088cc;
+		text-decoration: none;
+		font-size: 15px;
+
+	}
+
+/*.menuBoutonAccueil {
+	display: inline-block;
 	color: #FFFAFA;
 	text-decoration: none;
+	font-size: 18px;
+	margin-right: 20px;
 	padding: 13px;
+
 }
 
-.menu:hover {
+.menuBoutonAccueil:hover {
 	color: white;
 	background-color: #0088cc;
-}
-
-.menuBoutonCo {
-	display: inline-block;
-
-
-	border : solid 1px pink;
-	color: #FFFAFA;
 	text-decoration: none;
-	padding: 13px;
+	}*/
 
-}
-
-.menuBoutonCo:hover {
-	color: white;
-	background-color: #0088cc;
-}
-
-.boutonCo{
-	float: right;
-}
-
-nav{
-	position: fixed;
-	width: 100%;
-	max-width: 1200px;
-	z-index: 4;
-
-}
-
-.navbar-list {
-	background-image: url(images/banner.jpg);
-	padding: 13px;
-	margin: 0px;
-	border-bottom : solid 4px white;
-	border-radius: 10px;
-}
-
-/*----------------------------------Accueil---------------------------------*/
+	.menuBoutonCo {
+		display:block;
+		color: #ffffff;
+		text-decoration: none;
+		margin-left: 20px;
+		font-size: 17px;
+		padding: 13px;
 
 
-.blocVoyageAccueil {
-	display: inline-block;
-	text-align: center;
-	margin-left: 1.9%;
-	margin-right: 1.9%;
+	}
+
+	.menuBoutonCo:hover {
+		color: white;
+		background-color: #0088cc;
+		text-decoration: none;
+
+
+	}
+
+	.boutonCo{
+		float: right;
+		max-height: 51px;
+		display: inline-block;
+	}
+
+	nav{
+		position: fixed;
+		width: 100%;
+		max-width: 1200px;
+		z-index: 4;
+		max-height: 95px;
+
+	}
+
+	.navbar-list {
+		background-image: url(images/banner.jpg);
+		padding: 13px;
+		margin: 0px;
+		border-bottom : solid 4px white;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+
+	/*----------------------------------Accueil---------------------------------*/
+
+
+	.blocVoyageAccueil {
+		display: inline-block;
+		text-align: center;
+		margin-left: 1.9%;
+		margin-right: 1.9%;
 		border : solid 1px white;
 
-}
+	}
 
-.blocVoyageAccueil:hover {
-	background-color: #003366;
-}
+	.blocVoyageAccueil:hover {
+		background-color: #003366;
+	}
 
-.blocVoyageAccueil p {
-}
+	.blocVoyageAccueil img{
+		width: 350px;
+		height: 230px;
+	}
 
-.blocVoyageAccueil img{
-	width: 350px;
-	height: 230px;
-}
+	/* ---------------------------------Page de connexion-------------------------*/
 
-/* ---------------------------------Page de connexion-------------------------*/
-
-.connexionBody {
-	display: inline-block;
-	width: 30%;
-	margin-left: 5%;
-	margin-right: 10%;
+	.connexionBody {
+		display: inline-block;
+		width: 30%;
+		margin-left: 5%;
+		margin-right: 10%;
 /*	border:solid 1px pink;
 */	vertical-align: top;
-	margin-top: 20px;
+margin-top: 20px;
 }
 
 .connexionBody h2 {
@@ -146,7 +187,7 @@ nav{
 
 .connexionBodyBoutonCo {
 	width: 181px;
-} 
+}
 
 .inscriptionBody {
 	display: inline-block;
@@ -170,7 +211,7 @@ nav{
 .boutonCoBody {
 /*	border:solid 1px pink;
 */	padding-left:0px;
-	padding-right:0px;
+padding-right:0px;
 }
 
 .inscriptionAgenceLink {
@@ -183,43 +224,205 @@ nav{
 
 /*Firefox*/
 input[type=number] {
-    -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 /*Chrome*/
 input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button { 
+input::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin:0;
-}
-
-/* Opéra*/
-input::-o-inner-spin-button,
-input::-o-outer-spin-button { 
-	-o-appearance: none;
-	margin:0
 }
 
 .inscriptionBouton{
 	width: 181px;
 }
 
-
-
-
-
-
-
-/*----------------------------------FOOTER------------------------------------*/
-
-footer{
-	text-align: center;
-	vertical-align: center;
-	height: 120px;
-	border-top : 1px solid black;
-	margin-top: 20px;
-
+/* ---------------------------------Page de sejour-------------------------*/
+/*.pageSejourBlocVoyage p {
+	margin:0px;
 }
+
+.pageSejourBlocVoyage h3 {
+ 	text-align: center;
+ 	font-size: 50px;
+ 	margin-left: 155px;
+}
+
+.pageSejourBlocVoyage:hover {
+background-color: rgba(253, 253, 253, 0.5);
+transition: all 1s;
+-webkit-transition:all 1s;
+}
+
+
+.pageSejourBlocVoyage {
+	display: inline-block;
+	color: white;
+	margin-left: 125px;
+	margin-bottom: 50px;
+	border:solid 2px white;
+}
+
+.imgResumePageSejour {
+	width: 400px;
+	height: 266px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sejourResumeVoyage {
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sejourResumeVoyage p {
+	margin-left: 25px;
+}
+
+.sejourResumePrix {
+	width:150px;
+	margin-left: 100px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #e67300;
+	margin-top: 10%;
+}
+
+.pageSejourVoirOffre {
+	display: inline-block;
+	vertical-align: bottom;
+	padding: 10px;
+	background-color: green;
+	}*/
+	/*----------------------------------DetailsVoyages-----------------------------*/
+
+	.blocDescDetailVoyage {
+		border: 2px solid #000000;
+		margin: 50px;
+	}
+
+	.blocDescDetailVoyage h1{
+		text-align: center;
+	}
+
+
+	#paraDescVoyage {
+		border:2px solid white;
+		width: 900px;
+		margin: 5px auto 10px;
+	}
+	.imgEtbtnDescVoyage {
+		display: block;
+		width: 900px;
+		margin: auto;
+	}
+	.boutonCommanderDesc {
+		float: right;
+		display: inline-block;
+		background: orangered;
+		border-radius: 10px;
+		border: none;
+		width: 150px;
+		height: 80px;
+		color: white;
+	}
+
+	.boutonCommanderDesc:hover {
+		background: #a7541c;
+	}
+
+	.descVoyTarif {
+		width: 150px;
+		display: inline-block;
+		float: right;
+	}
+
+	.descVoyTarif p {
+		border: white 2px solid;
+		border-radius: 10px;
+		margin-top: 50px;
+	}
+
+	.btnFormDesc {
+		background: #111144;
+		border: none;
+		border-radius: 10px;
+		padding: 0px;
+		margin-top: 20px;
+		margin-right: 10px;
+		color: #b8f7ff;
+		width: 90px;
+		height: 50px;
+	}
+
+	.btnFormDesc:hover {
+		background: #3b85a2;
+		color: #0f0f0f;
+	}
+
+	.imgEtbtnDescVoyage img{
+		display: inline-block;
+		width: 600px;
+		height: 400px;
+	}
+
+	/*----------------------------------GestionCompte-----------------------------*/
+	#titreGestionDesComptes {
+		text-align: center;
+	}
+
+	.gestionCompteAdminBody {
+		color: white;
+	}
+
+	.gestionCompteUserBody {
+		color:white;
+		margin: auto;
+		width: 500px;
+		border: white 2px solid;
+		padding: 50px;
+	}
+
+	.divGestionCompteClient2 {
+		height: 80px;
+	}
+
+	.divLabelGestionCompte {
+		display: inline-block;
+	}
+
+	.divLabelGestionComptePartie2 {
+		display: inline-block;
+	}
+
+	.divInputGestionCompte {
+		color: #0f0f0f;
+		display: inline-block;
+		margin-left: 124px;
+	}
+
+	.divInputGestionComptePartie2 {
+		display: inline-block;
+		color: #0f0f0f;
+	}
+
+	.buttonValiderGestionCompte {
+		color: #0f0f0f;
+		margin-left: 170px;
+	}
+
+	/*----------------------------------FOOTER------------------------------------*/
+
+	footer{
+		text-align: center;
+		vertical-align: center;
+		height: 120px;
+		border-top : 1px solid black;
+		margin-top: 20px;
+
+	}
 
 
 

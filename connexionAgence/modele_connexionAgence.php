@@ -23,6 +23,7 @@
 			try{
 			$result=self::$connexion->prepare("insert into dutinfopw201641.Agence(nomAgence, mdpAgence, adresseAgence, numeroAgence, telAgence) 
 values ( ?, ?, ?, ?, ?)");
+
 			$mdpEncrypt = hash('sha256', $mdp.$numero);
 			$res=array($nom, $mdpEncrypt, $adresse, $numero, $tel);
 
