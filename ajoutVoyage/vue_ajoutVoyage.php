@@ -43,6 +43,14 @@
 				</form>
 			';
 		}
+
+		public function insertionReussie(){
+			echo 'Séjour ajouté';
+		}
+
+		public function insertionRatee(){
+			echo 'Échec de l\'ajout du voyage, veuillez réessayer';
+		}
 	}
 
 ?>

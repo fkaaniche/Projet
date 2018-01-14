@@ -28,24 +28,30 @@
                     var_dump($_FILES['illustrationSejour']['name']);*/
 
                     if(isset($_POST['typeVoyage']) && isset($_POST['dateDepart']) && isset($_POST['dateArrivee']) && isset($_POST['villeDepart']) && isset($_POST['villeArrivee']) && isset($_POST['tarifEnfant']) && isset($_POST['tarifAdulte']) && isset($_POST['hotelSejour']) && isset($_POST['nbPlacesSejour']) && isset($_POST['descriptionDetail']) && isset($_POST['descriptionFormalites']) && isset($_POST['descriptionTransport']) && isset($_POST['descriptionActivites']) && isset($_FILES['illustrationSejour']['name'])){
-                    	$typeVoyage = htmlspecialchars($_POST['typeVoyage']); //OK
-                    	$dateDepart = htmlspecialchars($_POST['dateDepart']); //OK
-                    	$dateArrivee = htmlspecialchars($_POST['dateArrivee']); //OK
-                    	$villeDepart = htmlspecialchars($_POST['villeDepart']); //OK
-                    	$villeArrivee = htmlspecialchars($_POST['villeArrivee']); //OK
-                    	$tarifEnfant = htmlspecialchars($_POST['tarifEnfant']); //OK
-                   		$tarifAdulte = htmlspecialchars($_POST['tarifAdulte']); //OK
-                    	$hotel = htmlspecialchars($_POST['hotelSejour']); //OK
-                    	$nbPlaces = htmlspecialchars($_POST['nbPlacesSejour']); //OK
-                    	$details = htmlspecialchars($_POST['descriptionDetail']); //OK
-                    	$formalites = htmlspecialchars($_POST['descriptionFormalites']); //OK
-                    	$transport = htmlspecialchars($_POST['descriptionTransport']); //OK
-                    	$activites = htmlspecialchars($_POST['descriptionActivites']); //OK
+                    	$typeVoyage = htmlspecialchars($_POST['typeVoyage']);
+                    	$dateDepart = htmlspecialchars($_POST['dateDepart']);
+                    	$dateArrivee = htmlspecialchars($_POST['dateArrivee']);
+                    	$villeDepart = htmlspecialchars($_POST['villeDepart']);
+                    	$villeArrivee = htmlspecialchars($_POST['villeArrivee']);
+                    	$tarifEnfant = htmlspecialchars($_POST['tarifEnfant']);
+                   		$tarifAdulte = htmlspecialchars($_POST['tarifAdulte']);
+                    	$hotel = htmlspecialchars($_POST['hotelSejour']);
+                    	$nbPlaces = htmlspecialchars($_POST['nbPlacesSejour']);
+                    	$details = htmlspecialchars($_POST['descriptionDetail']);
+                    	$formalites = htmlspecialchars($_POST['descriptionFormalites']);
+                    	$transport = htmlspecialchars($_POST['descriptionTransport']);
+                    	$activites = htmlspecialchars($_POST['descriptionActivites']);
                     	$numAgence = htmlspecialchars($_GET['numAgence']);
                     	$illustrationSejour = "images/imagesVoyage/".$_FILES['illustrationSejour']['name'];
 
                     	$tabDonnees = array('idType' => $typeVoyage, 'dateDebutSejour' => $dateDepart, 'dateFinSejour' => $dateArrivee, 'villeDepartSejour' => $villeDepart, 'villeArriveeSejour' =>$villeArrivee, 'tarifAdulte' => $tarifAdulte, 'tarifEnfant' => $tarifEnfant,'hotelSejour' => $hotel, 'nbPlaceSejour' => $nbPlaces,'descriptionDetail' => $details, 'descriptionFormalite' =>  $formalites, 'descriptionTransport' => $transport, 'descriptionActivite' => $activites, 'numAgence' => $numAgence, 'illustrationSejour' => $illustrationSejour);
-                    	$this->modele->ajouterVoyage($tabDonnees);
+                    	$ajoutVoyage = $this->modele->ajouterVoyage($tabDonnees);
+                    	if($ajoutVoyage == true){
+                    	    $this->vue->insertionReussie();
+                        }
+                        else{
+                            $this->vue->insertionRatee();
+                        }
                     }
                     else{
                     	$this->vue->vue_erreur("Erreur: un des champs n'est pas entré");
