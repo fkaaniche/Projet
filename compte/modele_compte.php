@@ -10,6 +10,16 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function getAgences(){
+            try{
+                $result=self::$connexion->query("select * from dutinfopw201641.Agence");
+                return $result->fetchAll(PDO::FETCH_ASSOC);
+            }
+            catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 		
 		public function getUtilisateur($mail){
 			try{
@@ -21,6 +31,16 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function getAgence($num){
+            try{
+                $result=self::$connexion->query("select * from dutinfopw201641.Agence where numeroAgence=".$num);
+                return $result->fetchAll(PDO::FETCH_ASSOC);
+            }
+            catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 		
 		public function editerCompte($nom, $prenom, $adresse, $mail,$admin){
 			try{
@@ -35,6 +55,17 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function editerCompteAgence($num, $nom, $adresse, $tel){
+            try{
+                $result=self::$connexion->prepare("update dutinfopw201641.Agence set nomAgence=:nomAgence ,adresseAgence=:adresseAgence ,telAgence=".$tel." where numeroAgence=".$num);
+                $result->bindValue("nomAgence", $nom);
+                $result->bindValue("adresseAgence", $adresse);
+                $result->execute();
+            }catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 		
 		public function supprimerCompte($mail){
 
@@ -60,6 +91,22 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function supprimerAgence($num){
+
+            try{
+                    $result=self::$connexion->prepare("delete from dutinfopw201641.Agence where numeroAgence=?");
+                    $result->execute(array($num));
+                    if($result->rowCount()==0){
+                        return false;
+                    }
+                    return true;
+
+            }
+            catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 		
 		public function bonMdp($mail, $mdp){
 			try{
@@ -78,6 +125,23 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function bonMdpAgence($num, $mdp){
+            try{
+                $result=self::$connexion->prepare("select mdpAgence, numeroAgence from dutinfopw201641.Agence where numeroAgence=".$num);
+                $result->execute();
+                $enregistrement=$result->fetch(PDO::FETCH_ASSOC);
+                $bonMdp=$enregistrement['mdpAgence'];
+                $mdpEncrypt=hash('sha256', $mdp.$num);
+                if($bonMdp!=$mdpEncrypt){
+                    return false;
+                }
+                return true;
+            }
+            catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 		
 		public function editerMdp($mail, $mdp){
 			try{
@@ -90,5 +154,17 @@
 				throw new ModeleCompteException();
 			}
 		}
+
+        public function editerMdpAgence($num, $mdp){
+            try{
+                $result=self::$connexion->prepare("update dutinfopw201641.Agence set mdpAgence=:mdpAgence where numeroAgence=".$num);
+                $mdpHash=hash('sha256', $mdp.$num);
+
+                $result->bindValue("mdpAgence", $mdpHash);
+                $result->execute();
+            } catch(PDOException $e){
+                throw new ModeleCompteException();
+            }
+        }
 	}
 ?>

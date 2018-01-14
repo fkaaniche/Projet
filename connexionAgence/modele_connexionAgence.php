@@ -3,14 +3,13 @@
 		
 		public function connexionAgence($numero, $mdp){
 			try{
-				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.Agence where numeroAgence=".$numero);
-				$res=array($numero);	
-				$result->execute($res);
+				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.agence where numeroAgence=?");
+				$result->execute(array($numero));
 			} catch(PDOException $e){
 				throw new ModeleConnexionAgenceException();
 			}
 
-			$enregistrement=$result->fetch(PDO::FETCH_ASSOC);	
+            $enregistrement=$result->fetch(PDO::FETCH_ASSOC);
 			$bonMdp=$enregistrement['mdpAgence'];
 			$mdpEncrypt=hash('sha256', $mdp.$numero);
 			if($bonMdp!=$mdpEncrypt){

@@ -25,7 +25,6 @@
 					<td class = informationsDuCompte >".$enregistrement['nomClient']."</td>
 					<td class = informationsDuCompte >".$enregistrement['prenomClient']."</td>
 					<td class = informationsDuCompte >".$enregistrement['adresseClient']."</td>
-					<!-- <td class = informationsDuCompte >".$enregistrement['mdpClient']."</td> -->
 					<td class = informationsDuCompte >";
 						if($enregistrement['estAdmin'] == 1){
 							$this->contenu.="<b><font color=\"#ffd11a\"> Oui </font></b>";
@@ -49,12 +48,12 @@
 				</tr>";
 			}
 			
-			$this->contenu.="</table></div>";
+			$this->contenu.="</table>";
 			$this->titre="Gestion des comptes";
 		}
 				
 		public function modifCompte($utilisateur){
-			if($utilisateur['estAdmin'] == 0){
+			if($_SESSION['mailClient']==$utilisateur['mailClient']){
 				$this->contenu= "<h1 id = titreGestionInfoCompte >Gérez votre profil </h1>";
 			}
 			else{
@@ -128,5 +127,92 @@
 				</form></div>';
 			$this->titre="Modification du compte";
 		}
+
+		public function affichageAgences($agences) {
+			$this->contenu.="	
+					
+				<h2>Agences</h2></br>	
+							<table id = tableauInformationCompte > 
+				<tr>
+				<td class = nomDesColones >Nom <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Numéro <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Adresse <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Tel <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Voir Voyage <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Editer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					<td class = nomDesColones >Supprimer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td></tr>
+				</tr>";
+
+			foreach ($agences as $enregistrement) {
+				$this->contenu.="<tr>
+					<td class = informationsDuCompte >".$enregistrement['nomAgence']."</td>
+					<td class = informationsDuCompte >".$enregistrement['numeroAgence']."</td>
+					<td class = informationsDuCompte >".$enregistrement['adresseAgence']."</td>
+					<td class = informationsDuCompte >".$enregistrement['telAgence']."</td>
+					<td class = informationsDuCompte ><a href='index.php?module=suiviVoyages&amp;numAgence=".$enregistrement['numeroAgence']."'>
+							<i class=\"fa fa-dropbox\" aria-hidden=\"true\"></i>
+					</a></td>
+					
+					<td class = informationsDuCompte ><a href='index.php?module=compte&amp;numAgence=".$enregistrement['numeroAgence']."&amp;action=form_editer'><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a></td>
+					<td class = informationsDuCompte ><a href='index.php?module=compte&amp;numAgence=".$enregistrement['numeroAgence']."&amp;action=supprimer'><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></a></td>
+					</tr>
+					";
+			}
+			$this->contenu.="</table>";
+			$this->contenu.="</div>";
+		}
+
+        public function modifAgence($Agence){
+                $this->contenu="<h1 id = titreGestionInfoCompte > Gérez votre Compte: ". $Agence[0]['nomAgence']."</h1>";
+            $this->contenu.="<div class='gestionCompteUserBody'><form id = gestionInformationPersonnelles action='index.php?module=compte&amp;action=modifier&amp;numAgence=".$Agence[0]['numeroAgence']."' method='POST'><br/>
+					<div id = enjoliveur >
+					<div class=divGestionCompteClient>
+				<div class = divLabelGestionCompte > 
+					<label>Nom : </label> <br/>
+					<label>Téléphone : </label> <br/>
+					<label>Adresse : </label> <br/>
+				
+			";
+
+            $this->contenu.="</div>
+				<div class = divInputGestionCompte >
+				<input type='text' value='".$Agence[0]["nomAgence"]."' name='nom'/><br/>
+				<input type='text' value='".$Agence[0]["telAgence"]."' name='tel'/><br/>
+				<input type='text' value='".$Agence[0]["adresseAgence"]."' name='adresse'/><br/>
+					
+			";
+
+            $this->contenu.="<div class=divGestionCompteClient2><div class = divLabelGestionComptePartie2 >";
+            if(isset($_SESSION['numeroAgence'])){
+                $this->contenu.="<label>Mot de passe actuel : </label></br>";
+
+
+                $this->contenu.='
+					<label> Nouveau mot de passe : </label></br>
+					<label> Confirmation mot de passe : </label> 
+				</div>
+			
+				<div class = divInputGestionComptePartie2 >';
+
+
+                $this->contenu.='<input type="password" autocomplete="off" name="mdpAct" placeholder="Mot de passe actuel" maxlength="254" /></br>';
+
+                $this->contenu.='
+					<input type="password" autocomplete="off" name="mdp1" placeholder="Nouveau mot de passe" maxlength="254" requiered></br>
+					<input type="password" autocomplete="off" name="mdp2" placeholder="Confirmer mot de passe" maxlength="254" requiered></br>
+				</div>
+				</div></div>
+				';
+            }
+            else {
+                $this->contenu.="</div></div></div>";
+            }
+            $this->contenu.='<br/> <input type=\'submit\' class= buttonValiderGestionCompte value=\'Valider\'/>
+			
+				</form></div></div></div>';
+            $this->titre="Modification du compte";
+        }
+		
+		
 	}
 ?>
