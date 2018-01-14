@@ -41,11 +41,10 @@
                     	$formalites = htmlspecialchars($_POST['descriptionFormalites']); //OK
                     	$transport = htmlspecialchars($_POST['descriptionTransport']); //OK
                     	$activites = htmlspecialchars($_POST['descriptionActivites']); //OK
-                    	$idAgence = htmlspecialchars($_GET['idAgence']);
+                    	$numAgence = htmlspecialchars($_GET['numAgence']);
                     	$illustrationSejour = "images/imagesVoyage/".$_FILES['illustrationSejour']['name'];
-                    	
-                    	$tabDonnees = array('idType' => $typeVoyage, 'dateDebutSejour' => $dateDepart, 'dateFinSejour' => $dateArrivee, 'villeDepartSejour' => $villeDepart, 'villeArriveeSejour' =>$villeArrivee, 'tarifAdulte' => $tarifAdulte, 'tarifEnfant' => $tarifEnfant,'hotelSejour' => $hotel, 'nbPlaceSejour' => $nbPlaces,'descriptionDetail' => $details, 'descriptionFormalite' =>  $formalites, 'descriptionTransport' => $transport, 'descriptionActivite' => $activites, 'idAgence' => $idAgence, 'illustrationSejour' => $illustrationSejour);
-                    	var_dump($tabDonnees);
+
+                    	$tabDonnees = array('idType' => $typeVoyage, 'dateDebutSejour' => $dateDepart, 'dateFinSejour' => $dateArrivee, 'villeDepartSejour' => $villeDepart, 'villeArriveeSejour' =>$villeArrivee, 'tarifAdulte' => $tarifAdulte, 'tarifEnfant' => $tarifEnfant,'hotelSejour' => $hotel, 'nbPlaceSejour' => $nbPlaces,'descriptionDetail' => $details, 'descriptionFormalite' =>  $formalites, 'descriptionTransport' => $transport, 'descriptionActivite' => $activites, 'numAgence' => $numAgence, 'illustrationSejour' => $illustrationSejour);
                     	$this->modele->ajouterVoyage($tabDonnees);
                     }
                     else{
