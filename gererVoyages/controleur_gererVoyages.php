@@ -12,12 +12,9 @@
 			    $this->vue->afficheListeSejours($sejours);
 
 			    if(isset($_POST['supprimer'])){
-                    $this->modele->supprimerSejour($_POST['idSejour']);
+                   $this->modele->supprimerSejour($_POST['idSejour']);
+                   $this->vue->afficheConfirmationSuppression();
                 }
-
-                //TODO gérer l'éditeur de séjour
-
-
 			}
 			catch(ModeleDetailsVoyageException $e){
 				$this->vue->vue_erreur("ça marche pas");

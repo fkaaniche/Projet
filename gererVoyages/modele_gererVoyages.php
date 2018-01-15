@@ -24,9 +24,15 @@
 
 		public function supprimerSejour($idSejour){
 		    try{
-                $strReqSuppr = 'delete from dutinfopw.Sejour WHERE idSejour='.$idSejour;
-                $reqSuppr = parent::$connexion->prepare($strReqSuppr);
-                $reqSuppr->execute($idSejour);
+                $strReqSupprTarif = 'delete from dutinfopw201641.Tarif where idSejour='.$idSejour.';';
+                $reqSupprTarif = parent::$connexion->prepare($strReqSupprTarif);
+                $reqSupprTarif->execute();
+
+
+                $strReqSupprSej = 'delete from dutinfopw201641.Sejour WHERE idSejour='.$idSejour.';';
+                $reqSupprSej = parent::$connexion->prepare($strReqSupprSej);
+                //var_dump($reqSupprSej);
+                $reqSupprSej->execute();
             }catch(PDOException $e){
                 throw new ModeleMesVoyagesException();
             }
@@ -34,7 +40,7 @@
 
         public function editerSejour($donnees){
 		    try{
-                $strReqEdit = 'update dutinfopw.Sejour set villeDepartSejour="'.$donnees['villeDepart'].'", dateDepartSejour="'.$donnees['dateDepart'].'", villeArriveeSejour="'.$donnees['villeArrivee'].'", dateArriveeSejour="'.$donnees['dateArrivee'].'",  idType='.$donnees['typeVoyage'].', nbPlacesSejour='.$donnees['nbPlacesSejour'].' , tarifAdulte='.$donnees['tarifAdulte'].' , tarifEnfant='.$donnees['tarifEnfant'].' , hotelSejour="'.$donnees['hotelSejour'].'", descriptionDetail="'.$donnees['descriptionDetail'].'", descriptionTransport="'.$donnees['descriptionTransport'].'", descriptionFormatiltes="'.$donnees['descriptionFormalites'].'" , descriptionActivites="'.$donnees['descriptionActivites'].'", illustrationSejour="'.$donnees['illustrationSejour'].'" where idSejour='.$donnees['idSejour'].';';
+                $strReqEdit = 'update dutinfopw201641.Sejour set villeDepartSejour="'.$donnees['villeDepart'].'", dateDepartSejour="'.$donnees['dateDepart'].'", villeArriveeSejour="'.$donnees['villeArrivee'].'", dateArriveeSejour="'.$donnees['dateArrivee'].'",  idType='.$donnees['typeVoyage'].', nbPlacesSejour='.$donnees['nbPlacesSejour'].' , tarifAdulte='.$donnees['tarifAdulte'].' , tarifEnfant='.$donnees['tarifEnfant'].' , hotelSejour="'.$donnees['hotelSejour'].'", descriptionDetail="'.$donnees['descriptionDetail'].'", descriptionTransport="'.$donnees['descriptionTransport'].'", descriptionFormatiltes="'.$donnees['descriptionFormalites'].'" , descriptionActivites="'.$donnees['descriptionActivites'].'", illustrationSejour="'.$donnees['illustrationSejour'].'" where idSejour='.$donnees['idSejour'].';';
                 $reqEdit = parent::$connexion->prepare($strReqEdit);
                 $reqEdit->execute($donnees);
             }catch(PDOException $e){
