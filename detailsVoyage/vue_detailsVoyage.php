@@ -47,7 +47,7 @@
 						p.textContent = "'.$details['descriptionTransport'].'"
 					}
 				</script>
-			</div>
+			</div></div>
 			';
 					$this->titre='Voyage à '.$details["villeArriveeSejour"];
 		}

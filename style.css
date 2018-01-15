@@ -135,7 +135,7 @@ h2 {
 		width: 100%;
 		max-width: 1200px;
 		z-index: 4;
-		max-height: 95px;
+		max-height: 800px;
 
 	}
 
@@ -239,8 +239,19 @@ input::-webkit-outer-spin-button {
 }
 
 /* ---------------------------------Page de sejour-------------------------*/
-/*.pageSejourBlocVoyage p {
+.pageSejourBlocVoyage p {
 	margin:0px;
+}
+
+.titrePageSejour {
+	text-align: center;
+	font-size: 50px;
+	margin-left: 155px;
+}
+
+
+.pageSejourBlocVoyage a{
+	color: white;
 }
 
 .pageSejourBlocVoyage h3 {
@@ -295,7 +306,7 @@ transition: all 1s;
 	vertical-align: bottom;
 	padding: 10px;
 	background-color: green;
-	}*/
+	}
 	/*----------------------------------DetailsVoyages-----------------------------*/
 
 	.blocDescDetailVoyage {
@@ -402,8 +413,14 @@ transition: all 1s;
 		display: inline-block;
 		margin-left: 124px;
 	}
+	.divInputGestionCompteA {
+		color: #0f0f0f;
+		display: inline-block;
+		margin-left: 106px;
+	}
 
-	.divInputGestionComptePartie2 {
+
+.divInputGestionComptePartie2 {
 		display: inline-block;
 		color: #0f0f0f;
 
@@ -414,7 +431,53 @@ transition: all 1s;
 		margin-left: 170px;
 	}
 
-	/*----------------------------------FOOTER------------------------------------*/
+/*----------------------------------AjoutVoyage-------------------------------*/
+
+.insertionVoyageBody {
+	color: white;
+	margin: auto;
+	display: block;
+	width: 583px;
+}
+
+.insertionVoyageLabel {
+	display: inline-block;
+	float: left;
+	width: 300px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+.insertionVoyageInput {
+	display: inline-block;
+	width: 200px;
+	color: #0f0f0f;
+	margin-top: 15px;
+	height: 26px;
+
+}
+
+.insertionVoyageTitre {
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 583px;
+}
+
+.insertionVoyageText {
+	color: #0f0f0f;
+	resize: none;
+}
+
+.insertionVoyagePhoto {
+	color: #ffffff;
+}
+
+.buttonSubmitAjouterVoyage {
+	color: #0f0f0f;
+}
+/*----------------------------------FOOTER------------------------------------*/
 
 	footer{
 		text-align: center;

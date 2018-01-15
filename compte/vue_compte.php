@@ -131,7 +131,8 @@
 		public function affichageAgences($agences) {
 			$this->contenu.="	
 					
-				<h2>Agences</h2></br>	
+				<h2>Agences</h2></br>		<div class='gestionCompteAdminBody'>
+
 							<table id = tableauInformationCompte > 
 				<tr>
 				<td class = nomDesColones >Nom <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
@@ -175,10 +176,10 @@
 			";
 
             $this->contenu.="</div>
-				<div class = divInputGestionCompte >
+				<div class = divInputGestionCompteA >
 				<input type='text' value='".$Agence[0]["nomAgence"]."' name='nom'/><br/>
 				<input type='text' value='".$Agence[0]["telAgence"]."' name='tel'/><br/>
-				<input type='text' value='".$Agence[0]["adresseAgence"]."' name='adresse'/><br/>
+				<input type='text' value='".$Agence[0]["adresseAgence"]."' name='adresse'/><br/></div></div>
 					
 			";
 
@@ -209,7 +210,7 @@
             }
             $this->contenu.='<br/> <input type=\'submit\' class= buttonValiderGestionCompte value=\'Valider\'/>
 			
-				</form></div></div></div>';
+				</form></div>';
             $this->titre="Modification du compte";
         }
 		

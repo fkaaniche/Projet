@@ -1,11 +1,14 @@
 <nav class="nav navbar-list">
-	 	<a href="index.php" ><h1 id="titreSite2">Voyages</h1></a>	
+	 	<a href="index.php" ><h1 id="titreSite2">Voyages</h1></a>
+    <label class="<?php if($nom_module=='sejour' || $nom_module=='pageSejour') echo 'active'?>"><a class="menu" href="index.php?module=sejour">Séjour</a></label>
+    <label class="<?php if($nom_module=='circuit' || $nom_module=='pageCircuit') echo 'active'?>"><a class="menu" href="index.php?module=circuit">Circuit</a></label>
+    <label class="<?php if($nom_module=='croisiere' || $nom_module=='pageCroisiere') echo 'active'?>"><a class="menu" href="index.php?module=croisiere">Croisière</a></label>
 <div class="boutonCo">
  
 
 	<?php
 
-	if(isset($_SESSION["mailClient"]) && $_SESSION["mailClient"]!="" && isset($_SESSION["mdpClient"]) && $_SESSION["mdpClient"]!="" && isset($_SESSION["admin"]) && $_SESSION["admin"]!=NULL){
+	if(isset($_SESSION["mailClient"]) && $_SESSION["mailClient"]!="" /*isset($_SESSION["mdpClient"]) && $_SESSION["mdpClient"]!="" */&& isset($_SESSION["admin"]) && $_SESSION["admin"]!=NULL){
 
 		if($_SESSION["admin"]!=1){
 			?>
@@ -27,7 +30,7 @@
 </nav>
 <?php		}
 		}
-		else if(isset($_SESSION['numeroAgence']) && isset($_SESSION['mdpAgence'])) {
+		else if(isset($_SESSION['numeroAgence'])) {
 		    //$numAgence = $_SESSION['numeroAgence'];
 ?>
 			<label class="<?php if($nom_module=='ajoutVoyage') echo 'active'?>">
