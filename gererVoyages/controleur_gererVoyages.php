@@ -13,6 +13,7 @@
 
 			    if(isset($_POST['supprimer'])){
                    $this->modele->supprimerSejour($_POST['idSejour']);
+                   header("Refresh:0");
                    $this->vue->afficheConfirmationSuppression();
                 }
 			}

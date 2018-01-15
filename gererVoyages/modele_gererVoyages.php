@@ -28,7 +28,6 @@
                 $reqSupprTarif = parent::$connexion->prepare($strReqSupprTarif);
                 $reqSupprTarif->execute();
 
-
                 $strReqSupprSej = 'delete from dutinfopw201641.Sejour WHERE idSejour='.$idSejour.';';
                 $reqSupprSej = parent::$connexion->prepare($strReqSupprSej);
                 //var_dump($reqSupprSej);
