@@ -30,11 +30,10 @@
 							<div class="descVoyTarifEnfantAdulte"> 
 							<p> Tarif:</br>'.$details["prixEnfant"].'€ par Enfant</br>'
 								.$details["prixAdulte"].'€ par Adulte</p>
-							</div>
-							</div>.';
+							</div>';
 					}
 					echo'. 
-					<img src="'.$details["illustrationSejour"].'" alt="Image Séjour"/>
+					</div><img src="'.$details["illustrationSejour"].'" alt="Image Séjour"/>
 					<form>
 						<input type="button" value="Description" id="btnDesc" class="btnFormDesc" onclick="afficheDesc()"></input>
 						<input type="button" value="Activités" id="btnActi" class="btnFormDesc" onclick="afficheActi()"></input>

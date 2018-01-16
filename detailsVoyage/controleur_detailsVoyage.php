@@ -25,7 +25,6 @@
 					$idSej=htmlspecialchars($_GET['idSejour']);
 					$nbEnfant=htmlspecialchars($_POST['nbEnfant']);
 					$nbAdulte=htmlspecialchars($_POST['nbAdulte']);
-					var_dump($idSej);
 					try{
 						if(($this->modele->reservationExiste($idSej))) {
 							$this->vue->vue_erreur("Vous avez déja reserver ce voyage.");					
@@ -36,11 +35,11 @@
 						}
 						else {
 							$this->modele->reserverSejour($idSej,$nbEnfant,$nbAdulte);
-							$this->vue->vue_confirm("Mashallah, vous avez reserver ce voyage !");	
+							$this->vue->vue_confirm("Merci d'avoir reserver ce voyage !");	
 						}		
 					}
 					catch(ModeleConnexionException $e){
-						$this->vue->vue_erreur("La connexion n'a pas pu aboutir :/");
+						$this->vue->vue_erreur("La connexion n'a pas pu aboutir ");
 					}
 			}
 		}

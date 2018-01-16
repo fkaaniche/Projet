@@ -14,7 +14,7 @@
 					<td class = nomDesColones >Adresse <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 
 					<td class = nomDesColones >Est admin ? <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
-					<td class = nomDesColones >Voir commandes <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
+					
 					<td class = nomDesColones >Editer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 					<td class = nomDesColones >Supprimer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 				</tr>
@@ -90,7 +90,7 @@
 			else{
 				$this->contenu.="'hidden'"; 
 			}
-			$this->contenu.=" value='".$utilisateur["estAdmin"]."' name='admin'/><br/> 
+			$this->contenu.=" value='".$utilisateur["estAdmin"]."' name='admin'/>
 
 					</div></div><br/>
 			";
@@ -149,7 +149,6 @@
 					<td class = nomDesColones >Numéro <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 					<td class = nomDesColones >Adresse <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 					<td class = nomDesColones >Tel <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
-					<td class = nomDesColones >Voir Voyage <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 					<td class = nomDesColones >Editer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td>
 					<td class = nomDesColones >Supprimer <i class=\"fa fa-sort-desc\" aria-hidden=\"true\"></i></td></tr>
 				</tr>";

@@ -22,13 +22,15 @@
 		case "accueil" :
 		case "connexion" :
 		case "connexionAgence" :
+		case "sejour" :
+		case "circuit" :
+		case "croisiere" :
 		case "detailsVoyage" :
-<<<<<<< HEAD
-		case "compte";
-=======
+
+
 		case "ajoutVoyage" :
 		case "compte" :
->>>>>>> f98ce648de98fd78bea40458f7e24516bed0d431
+		case "gererVoyages" :
 		case "deconnexion" :
 			break;
 		default: 

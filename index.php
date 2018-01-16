@@ -26,11 +26,10 @@
 		case "circuit" :
 		case "croisiere" :
 		case "detailsVoyage" :
-
-
+		case "panier":
 		case "ajoutVoyage" :
 		case "compte" :
-
+		case "gererVoyages" :
 		case "deconnexion" :
 			break;
 		default: 

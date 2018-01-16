@@ -1,5 +1,5 @@
 <nav class="nav navbar-list">
-	 	<a href="index.php" ><h1 id="titreSite2">Voyages</h1></a>
+	 	<a href="index.php" ><img id="titreSite2" src= images/sticker-tete-de-cerf.jpg /> 
     <label class="<?php if($nom_module=='sejour' || $nom_module=='pageSejour') echo 'active'?>"><a class="menu" href="index.php?module=sejour">Séjour</a></label>
     <label class="<?php if($nom_module=='circuit' || $nom_module=='pageCircuit') echo 'active'?>"><a class="menu" href="index.php?module=circuit">Circuit</a></label>
     <label class="<?php if($nom_module=='croisiere' || $nom_module=='pageCroisiere') echo 'active'?>"><a class="menu" href="index.php?module=croisiere">Croisière</a></label>
@@ -23,7 +23,6 @@
 
 			if($_SESSION["admin"]==1) {
 ?>			<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer comptes</a></label>
-			<label class="<?php if($nom_module=='gererVoyage') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
 			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menuBoutonCo" href="index.php?action=deconnexion">Déconnexion</a></label>
 
 
@@ -38,7 +37,7 @@
                 <a class="menu" href="index.php?module=ajoutVoyage">Ajouter un Voyage</a>
 			</label>
 			<label class="<?php if($nom_module=='compte') echo 'active'?>"><a class="menu" href="index.php?module=compte">Gérer le compte</a></label>
-			<label class="<?php if($nom_module=='gererVoyage') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyage">Gérer Voyage</a></label>
+			<label class="<?php if($nom_module=='gererVoyages') echo 'active' ?> "><a class="menu" href="index.php?module=gererVoyages">Gérer Voyages</a></label>
 			<label class="<?php if($nom_module=='deconnexion')echo 'active'?>"><a class="menuBoutonCo" href="index.php?action=deconnexion">Déconnexion</a></label>
 
 <?php
