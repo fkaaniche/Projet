@@ -45,6 +45,7 @@
 				$id_sejour = $requeteIdSejour->fetch(PDO::FETCH_ASSOC);
 				//var_dump($id_sejour);
 				$idSejour = $id_sejour['idSejour'];
+				//var_dump($idSejour);
 
 
                 //ajout du tarif du séjour dans la table tarif

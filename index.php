@@ -30,6 +30,7 @@
 		case "ajoutVoyage" :
 		case "compte" :
 		case "gererVoyages" :
+		case "panier" :
 		case "deconnexion" :
 			break;
 		default: 
