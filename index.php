@@ -22,6 +22,9 @@
 		case "accueil" :
 		case "connexion" :
 		case "connexionAgence" :
+		case "sejour" :
+		case "circuit" :
+		case "croisiere" :
 		case "detailsVoyage" :
 
 

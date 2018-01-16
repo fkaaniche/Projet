@@ -47,10 +47,10 @@
                     	$tabDonnees = array('idType' => $typeVoyage, 'dateDebutSejour' => $dateDepart, 'dateFinSejour' => $dateArrivee, 'villeDepartSejour' => $villeDepart, 'villeArriveeSejour' =>$villeArrivee, 'tarifAdulte' => $tarifAdulte, 'tarifEnfant' => $tarifEnfant,'hotelSejour' => $hotel, 'nbPlaceSejour' => $nbPlaces,'descriptionDetail' => $details, 'descriptionFormalite' =>  $formalites, 'descriptionTransport' => $transport, 'descriptionActivite' => $activites, 'numAgence' => $numAgence, 'illustrationSejour' => $illustrationSejour);
                     	$ajoutVoyage = $this->modele->ajouterVoyage($tabDonnees);
                     	if($ajoutVoyage == true){
-                    	    $this->vue->insertionReussie();
+                    	    $this->vue->vue_confirm("Insertion réussie");
                         }
                         else{
-                            $this->vue->insertionRatee();
+                            $this->vue->vue_erreur("Echec de l'insertion");
                         }
                     }
                     else{
