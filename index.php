@@ -28,6 +28,7 @@
 		case "detailsVoyage" :
 		case "ajoutVoyage" :
 		case "compte" :
+		case "gererVoyages" :
 		case "deconnexion" :
 			break;
 		default: 
