@@ -8,6 +8,7 @@
 			$this->vue = new VueDetailsVoyage();
 			try{
 				$idSejour = $this->modele->getDetails($_GET["idSejour"] );
+				//var_dump($idSejour);
 				if( $idSejour == false){ 
 					$this->vue->vue_erreur("ça marche pas");
 				}

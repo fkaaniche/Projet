@@ -27,14 +27,20 @@
 				'<h2>Catégories</h2>
 				
 				<div class="blocVoyageAccueil">
-					<img src="images/imagesVoyage/club-vacances-famille.jpg" alt="Catégorie club vacances"/>
-					<p>Séjours en club vacances</p>
+					<a href="index.php?module=sejour">
+					<img src="images/imagesVoyage/club-vacances-famille.jpg" alt="Tous les séjours"/>
+					<p>Tous nos séjours</p>
+					</a>
 				</div><div class="blocVoyageAccueil">
-				<img src="images/imagesVoyage/chalet-ski.jpg" alt="Catégorie montagne"/>
-				<p>Pour les amateurs de montagne</p>
+				<a href="index.php?module=croisiere">
+				<img src="images/imagesVoyage/croisiere.jpg" alt="Catégorie croisière"/>
+				<p>Toutes nos croisières</p>
+				</a>
 			</div><div class="blocVoyageAccueil">
-			<img src="images/imagesVoyage/spa.jpg" alt="Catégorie thalasso"/>
-			<p>Séjours détente en thalasso-thérapie</p>
+			<a href="index.php?module=circuit">
+			<img src="images/imagesVoyage/barcelone.jpg" alt="Catégorie circuit"/>
+			<p>Tous nos circuits</p>
+			</a>
 		</div>';
 	}
 	}

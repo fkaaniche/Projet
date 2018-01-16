@@ -39,12 +39,13 @@
                 $strRequeteIdSejour = 'select idSejour from dutinfopw201641.Sejour where dateDebutSejour="'.$donnees['dateDebutSejour'].'" and dateFinSejour="'.$donnees['dateFinSejour'].'" and nbPlaceSejour='.$donnees['nbPlaceSejour'].' and villeDepartSejour="'.$donnees['villeDepartSejour'].'" and hotelSejour="'.$donnees['hotelSejour'].'" and descriptionDetail="'.$donnees['descriptionDetail'].'";';
                 //$strRequeteIdSejour = "select idSejour from dutinfopw201641.Sejour where dateDebutSejour='".$donnees['dateDebutSejour']."' and dateFinSejour='".$donnees['dateFinSejour']."' and nbPlaceSejour=".$donnees['nbPlaceSejour']." and villeDepartSejour='".$donnees['villeDepartSejour']."' and hotelSejour='".$donnees['hotelSejour']."' and descriptionDetail='".$donnees['descriptionDetail']."';";
 				$requeteIdSejour = parent::$connexion->prepare($strRequeteIdSejour);
-				$requeteIdSejour->execute(array());
+				$requeteIdSejour->execute($donnees);
 
 				//var_dump($requeteIdSejour);
 				$id_sejour = $requeteIdSejour->fetch(PDO::FETCH_ASSOC);
 				//var_dump($id_sejour);
 				$idSejour = $id_sejour['idSejour'];
+				//var_dump($idSejour);
 
 
                 //ajout du tarif du séjour dans la table tarif
