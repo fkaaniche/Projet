@@ -24,7 +24,7 @@
 
 		public function supprimerSejour($idSejour){
 		    try{
-                $strReqSupprTarif = 'delete from dutinfopw201641.Tarif where idSejour='.$idSejour.';';
+                $strReqSupprTarif = 'delete from dutinfopw201641.tarif where idSejour='.$idSejour.';';
                 $reqSupprTarif = parent::$connexion->prepare($strReqSupprTarif);
                 $reqSupprTarif->execute();
 
