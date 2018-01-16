@@ -1,6 +1,7 @@
 <?php
 
   require_once("moduleGenerique/module_generique.php"); // Require module et MVC
+
 	ModeleGenerique::init();
 	session_start();
 	
@@ -21,7 +22,13 @@
 		case "accueil" :
 		case "connexion" :
 		case "connexionAgence" :
-
+		case "detailsVoyage" :
+<<<<<<< HEAD
+		case "compte";
+=======
+		case "ajoutVoyage" :
+		case "compte" :
+>>>>>>> f98ce648de98fd78bea40458f7e24516bed0d431
 		case "deconnexion" :
 			break;
 		default: 
@@ -35,4 +42,4 @@
 	$module->controleur->getVue()->tamponVersContenu();
 	require_once("structurePage/template.php");
 
-?>
+	?>

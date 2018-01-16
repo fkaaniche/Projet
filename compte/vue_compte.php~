@@ -123,7 +123,20 @@
 			
 				$this->contenu.='
 					<input type="password" autocomplete="off" name="mdp1" placeholder="Nouveau mot de passe" maxlength="254" requiered></br>
+<<<<<<< HEAD
+					<input type="password" autocomplete="off" name="mdp2" placeholder="Confirmer mot de passe" maxlength="254" requiered></br></br>
+				</div>
 
+				</br>
+				</div>
+				<br/> <input type=\'submit\' id = buttonValiderGestionCompte value=\'Valider\'/>
+			
+				</form></div>
+
+			';}
+			$this->titre="Modification du compte";
+		}
+=======
 					<input type="password" autocomplete="off" name="mdp2" placeholder="Confirmer mot de passe" maxlength="254" requiered></br>
 				</div>
 				</div></div>
@@ -224,6 +237,6 @@
         }
 		
 		
-
+>>>>>>> f98ce648de98fd78bea40458f7e24516bed0d431
 	}
 ?>

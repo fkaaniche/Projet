@@ -7,7 +7,7 @@
 		public function messageConnexion(){
 			$this->vue=new VueConnexion();
 			$this->modele=new ModeleConnexion();
-			if(isset($_SESSION['mailClient']) /*&& isset($_SESSION['mdpClient'])*/) {
+			if(isset($_SESSION['mailClient']) && isset($_SESSION['mdpClient'])) {
 				$this->vue->vue_erreur("Vous êtes déjà connecté");
 			}
 			else {
