@@ -402,6 +402,8 @@ transition: all 1s;
 
 	.divLabelGestionCompte {
 		display: inline-block;
+		padding-bottom: 100px;
+		height: 132px;
 	}
 
 	.divLabelGestionComptePartie2 {
@@ -419,13 +421,23 @@ transition: all 1s;
 		margin-left: 106px;
 	}
 
+	.buttonValiderGestionCompte {
+		color: black;
+		margin-top: 15px;
+	}
+
+	.labelFixeGestionCompte {
+		margin-top: 10px;
+	}
+
 
 .divInputGestionComptePartie2 {
 		display: inline-block;
 		color: #0f0f0f;
 
+}
 
-/*----------------------------------GestionCompte-----------------------------*/
+
 #titreGestionDesComptes {
 	text-align: center;
 }
@@ -446,14 +458,16 @@ transition: all 1s;
 		margin-left: 170px;
 	}
 
-<
+
 /*----------------------------------AjoutVoyage-------------------------------*/
 
 .insertionVoyageBody {
 	color: white;
 	margin: auto;
 	display: block;
-	width: 583px;
+	width: 500px ;
+	vertical-align: center;
+
 }
 
 .insertionVoyageLabel {
@@ -462,6 +476,7 @@ transition: all 1s;
 	width: 300px;
 	margin-top: 15px;
 	margin-bottom: 0px;
+	color: white;
 }
 
 .insertionVoyageInput {
@@ -470,6 +485,10 @@ transition: all 1s;
 	color: #0f0f0f;
 	margin-top: 15px;
 	height: 26px;
+}
+
+.insertionVoyageInputDate {
+		color: #0f0f0f;
 
 }
 

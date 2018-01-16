@@ -3,8 +3,10 @@
 		
 		public function connexionAgence($numero, $mdp){
 			try{
-				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.agence where numeroAgence=?");
-				$result->execute(array($numero));
+
+				$result=self::$connexion->prepare("select numeroAgence, mdpAgence from dutinfopw201641.Agence where numeroAgence=".$numero);
+				var_dump($result);
+				$result->execute();
 			} catch(PDOException $e){
 				throw new ModeleConnexionAgenceException();
 			}

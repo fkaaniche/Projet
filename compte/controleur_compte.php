@@ -15,7 +15,6 @@ class controleurCompte extends ControleurGenerique{
 			}*/
 
 			try {
-				var_dump($_SESSION);
                 if (isset($_GET["action"])) { //action
                     $action = htmlspecialchars($_GET["action"]);
                     //modifier

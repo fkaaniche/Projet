@@ -65,14 +65,14 @@
 					<div id = enjoliveur >
 					<div class=divGestionCompteClient>
 				<div class = divLabelGestionCompte > 
-					<label>Nom : </label> <br/>
-					<label>Prénom : </label> <br/>
-					<label> adresse : </label> <br/>
+					<label class=labelFixeGestionCompte>Nom : </label> <br/>
+					<label class=labelFixeGestionCompte>Prénom : </label> <br/>
+					<label class=labelFixeGestionCompte> adresse : </label> <br/>
 				
 			";
 
 			if($_SESSION['admin']==1){
-				$this->contenu.="<label>Admin* : </label>"; 
+				$this->contenu.="<label class=labelFixeGestionCompte>Admin* : </label>"; 
 			}
 			$this->contenu.="</div>
 				<div class = divInputGestionCompte >
@@ -109,10 +109,10 @@
 				
 
 				$this->contenu.='
-					<label> Nouveau mot de passe : </label></br>
+					<label class=labelFixeGestionCompte> Nouveau mot de passe : </label></br>
 
 
-					<label> Confirmation mot de passe : </label> 
+					<label class=labelFixeGestionCompte> Confirmation mot de passe : </label> 
 				</div>
 			
 				<div class = divInputGestionComptePartie2 >';
@@ -179,9 +179,9 @@
 					<div id = enjoliveur >
 					<div class=divGestionCompteClient>
 				<div class = divLabelGestionCompte > 
-					<label>Nom : </label> <br/>
-					<label>Téléphone : </label> <br/>
-					<label>Adresse : </label> <br/>
+					<label class=labelFixeGestionCompte>Nom : </label> <br/>
+					<label class=labelFixeGestionCompte>Téléphone : </label> <br/>
+					<label class=labelFixeGestionCompte>Adresse : </label> <br/>
 				
 			";
 
@@ -195,12 +195,12 @@
 
             $this->contenu.="<div class=divGestionCompteClient2><div class = divLabelGestionComptePartie2 >";
             if(isset($_SESSION['numeroAgence'])){
-                $this->contenu.="<label>Mot de passe actuel : </label></br>";
+                $this->contenu.="<label class=labelFixeGestionCompte>Mot de passe actuel : </label></br>";
 
 
                 $this->contenu.='
-					<label> Nouveau mot de passe : </label></br>
-					<label> Confirmation mot de passe : </label> 
+					<label class=labelFixeGestionCompte> Nouveau mot de passe : </label></br>
+					<label class=labelFixeGestionCompte> Confirmation mot de passe : </label> 
 				</div>
 			
 				<div class = divInputGestionComptePartie2 >';
